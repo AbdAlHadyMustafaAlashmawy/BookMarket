@@ -1,0 +1,65 @@
+﻿@model Producer
+@{
+    ViewData["Title"] = "CreateProducerForm";
+}
+<head>
+         <!-- Include jQuery and jQuery Validation Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.12/jquery.validate.unobtrusive.min.js"></script>
+</head>
+<h1>CreateProducerForm</h1>
+
+<form asp-action="CreateProducer" method="post">
+    <div class="mb-3">
+        <label for="image" class="form-label">Picture (Image URL):</label>
+        <input data-val="true" data-val-required="Url required" type="text" value="@Model?.LogoUrl" class="form-control" id="LogoUrl" name="LogoUrl" required>
+        @Html.ValidationMessageFor(x=>x.LogoUrl,"Logo URL is required",new {@class="text-danger"})
+    </div>
+    <div class="mb-3">
+        <label for="name" class="form-label">Name:</label>
+        <input type="text" data-val="true" data-val-required="Name Can't be empty'" value="@Model?.Name" class="form-control" id="name" name="Name" required>
+        @Html.ValidationMessageFor(x => x.Name, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="mb-3">
+        <label for="description" class="form-label">Description:</label>
+        <textarea class="form-control" asp-for=Description value="@Model?.Description" id="description" name="Description" rows="4" required>@Model.Description</textarea>
+        @Html.ValidationMessageFor(x => x.Description, "", new { @class = "text-danger" })
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+@section Scripts {
+@*         <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.12/jquery.validate.unobtrusive.min.js"></script> *@
+}
+
+@* <script>
+    $(document).ready(function () {
+        $('form').validate({
+            // ... existing validation options
+        });
+
+        $("#name").on('blur keyup', function () {
+            var name = $(this).val();
+            $.ajax({
+                url: '@Url.Action("IsProducerNameUnique", "Validation")',
+                data: { Name: name },
+                dataType: 'json',
+                success: function (response) {
+                    if (response) {
+                        $("#name-error").text("Producer name must be unique").show(); // Replace with your error span id
+                    } else {
+                        $("#name-error").hide();
+                    }
+                },
+                error: function () {
+                    console.error("Error checking name uniqueness");
+                }
+            });
+        });
+    });
+
+</script> *@

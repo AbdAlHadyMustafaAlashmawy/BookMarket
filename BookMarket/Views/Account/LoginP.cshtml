@@ -1,0 +1,187 @@
+﻿ @model Account
+@{
+    ViewData["Title"] = "LoginP";
+}
+@*
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 50%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4caf50;
+            color: #fff;
+            cursor: pointer;
+        }
+
+            button[type="submit"]:hover {
+                background-color: #45a049;
+            }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Login</h1>
+        <form asp-action="LoginAuthentication" class="login-form">
+            <div class="form-group">
+                <label asp-for="@Model.UserName"></label>
+                <input value="@Model?.UserName" class="form-control" asp-for="@Model.UserName" required />
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.Password"></label>
+                <input value="@Model?.Password" class="form-control" asp-for="@Model.Password" required />
+            </div>
+            @if (TempData["Invalid"] != null && (bool)TempData["Invalid"])
+            {
+                <p style="color:red">Invalid UserName or Password</p>
+                TempData["Invalid"] = false;
+            }
+            <button type="submit" class="btn btn-success">Login</button>
+        </form>
+    </div>
+</body>
+</html> *@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Login 10</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+        body{
+            background: linear-gradient(to bottom, aqua, white);
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+</head>
+<body>
+    <section class="ftco-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6 text-center mb-5">
+                    <h2 class="heading-section">Login</h2>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-6 col-lg-4">
+                    <div class="login-wrap p-0">
+                        <h3 class="mb-4 text-center">Have an account?</h3>
+                        <form asp-action="LoginAuthentication" class="signin-form">
+                            <div class="form-group">
+                                <input value="@Model?.UserName" asp-for="@Model.UserName" class="form-control" placeholder="Username" required>
+
+                            </div>
+                            <div class="form-group">
+                                <input value="@Model?.Password" asp-for="@Model.Password" id="password-field" class="form-control" placeholder="Password" required>
+                            </div>
+                            @if (TempData["valid"] != null && !(bool)TempData["valid"])
+                            {
+                                <p style="color:red">Invalid UserName or Password</p>
+                                TempData["valid"] = true;
+                            }
+                            <div class="form-group">
+                                <button type="submit" class="form-control btn btn-primary submit px-3">Sign In</button>
+                            </div>
+                            <div class="form-group d-md-flex">
+                                <div class="w-50">
+                                    <label class="checkbox-wrap checkbox-primary">
+                                        Remember Me
+                                        <input type="checkbox" checked>
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div class="w-50 text-md-right">
+                                    <a href="#" style="color: #fff">Forgot Password</a>
+                                </div>
+                            </div>
+                        </form>
+                        <a href="@Url.Action("SignupForm", "Account")" class="btn btn-success">Signup</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/popper.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/main.js"></script>
+    @section Scripts {
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.12/jquery.validate.unobtrusive.min.js"></script>
+        
+    }
+    <script>
+        $(document).ready(function () {
+            // Initialize form validation
+            $('form').validate({
+                onkeyup: false, // Disable validation on keyup to prevent instant validation on typing
+                onfocusout: false // Disable validation on focus out to prevent instant validation when leaving the field
+            });
+
+            // Trigger validation on input change
+            $('input').on('input', function () {
+                $(this).valid(); // Trigger validation for the current input field
+            });
+        });
+    </script>
+
+</body>
+</html>
+
+

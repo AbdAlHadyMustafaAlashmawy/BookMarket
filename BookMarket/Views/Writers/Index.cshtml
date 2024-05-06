@@ -1,0 +1,87 @@
+﻿@model IEnumerable<Writer>
+@{
+    ViewData["Title"] = "Index";
+}
+<style>
+    body {
+        background-color: #c2b280; /* Adjust for desired brown shade */
+    }
+
+    .container {
+        background-image: url("https://www.freepik.com/free-vector/brown-islamic-floral-background_884078.htm");
+        background-size: cover;
+        position: relative; /* Allows positioning of overlay element */
+        padding: 20px; /* Optional padding for content */
+    }
+
+    .inscription-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white overlay */
+        text-align: center; /* Center inscriptions */
+        font-family: "Arabic Fonts", serif; /* Example Arabic font, adjust as needed */
+        color: #333; /* Inscription text color */
+    }
+
+        .inscription-overlay h1, .inscription-overlay p {
+            margin: 0;
+            padding: 10px; /* Adjust spacing between inscriptions */
+        }
+
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+
+<div class="container">
+    <a class="btn btn-info btn-sm" href="@Url.Action("CreateRedirectorForm", "Writers")">Create Writer</a>
+    <div class="row">
+        <div class="col-md-10 offset-md-1">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Profile Picture</th>
+                        <th>Name</th>
+                        <th>Religion</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td class="align-middle">
+                                <img src="@item.ProfilePictureUrl" alt="@item.Description" class="rounded-circle img-fluid" style="max-width: 100px">
+                            </td>
+                            <td class="align-middle">@Html.DisplayFor(x => item.Name)</td>
+                            <td class="align-middle">@Html.DisplayFor(x => item.Religion)</td>
+                            <td class="align-middle">
+                                <a class="btn btn-info btn-sm" href="@Url.Action("View", "Writers",new { id = @item.Id })">
+                                    <i class="bi bi-eye">View</i>
+                                </a>
+                                <a class="btn btn-primary btn-sm" href="@Url.Action("Edit", "Writers",new { id = @item.Id })">
+                                    <i class="bi bi-pencil-square">Edit</i>
+                                </a>  |
+                                <a class="btn btn-danger btn-sm" href="@Url.Action("DeleteWriter", "Writers",new { id = @item.Id })">
+                                    <i class="bi bi-x-circle">Delete</i>
+                                </a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+</script>

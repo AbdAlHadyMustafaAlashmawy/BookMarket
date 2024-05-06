@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+@using (Html.BeginForm("Upload", "Test", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+
+    @if (((bool)ViewBag.ImgUploaded))
+    {
+        <p style="color:red">Can't Upload Image'</p>
+    }
+    else
+    {
+        <p style="color:green">Image Uploaded Successfully'</p>
+    }
+    @if (!string.IsNullOrEmpty(ViewData["ImageUrl"]?.ToString()))
+    {
+        <img src="~/images/@ViewData["ImageUrl"]" />
+    }
+    <div>
+        <input name="submit" value="Upload" type="submit" />
+    </div>
+}

@@ -1,0 +1,103 @@
+﻿@model Account
+@{
+    ViewData["Title"] = "SignupForm";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .signup-form {
+            max-width: 400px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+        }
+
+            .signup-form h1 {
+                text-align: center;
+                margin-bottom: 30px;
+            }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+
+            .btn-primary:hover {
+                background-color: #0056b3;
+                border-color: #0056b3;
+            }
+    </style>
+     <!-- Include jQuery and jQuery Validation Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.12/jquery.validate.unobtrusive.min.js"></script>
+
+</head>
+<body>
+
+    <form asp-action="SignupConfirm" class="signup-form">
+        <h1>Signup Form</h1>
+        <div class="form-group">
+            <label for="UserName">Username</label>
+            <input asp-for="@Model.UserName" class="form-control" value="@Model?.UserName" id="UserName" required />
+            <span asp-validation-for="@Model.UserName" style="color:red"></span>
+        </div>
+        <div class="form-group">
+            <label for="Password">Password</label>
+            <input asp-for="@Model.Password" type="password" class="form-control" value="@Model?.Password" id="Password" required />
+            <span asp-validation-for="@Model.Password" style="color:red"></span>
+
+        </div>
+        <div class="form-group">
+            <label for="Gmail">Email</label>
+            <input asp-for="@Model.Gmail" type="email" class="form-control" value="@Model?.Gmail" id="Gmail" required />
+            <span asp-validation-for="@Model.Gmail" style="color:red"></span>
+
+        </div>
+        <div class="form-group">
+            <label for="PhoneNumber">Phone Number</label>
+            <input asp-for="@Model.PhoneNumber" class="form-control" value="@Model?.PhoneNumber" id="PhoneNumber" required />
+            <span asp-validation-for="@Model.PhoneNumber" style="color:red"></span>
+
+        </div>
+        <div class="form-group">
+            <label for="Birthday">Birthday</label>
+            <input asp-for="@Model.Birthday" type="date" class="form-control" value="@Model?.Birthday" id="Birthday"/>
+            <span asp-validation-for="@Model.Birthday" style="color:red"></span>
+
+        </div>
+        <div class="form-group">
+            <label for="Admin">Account Type</label>
+            <select asp-for="@Model.Admin" class="form-control" id="Admin">
+                <option value="true">Admin</option>
+                <option value="false">Customer</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block" href="@Url.Action("SignupConfirm","Account")">Sign Up</button>
+    </form>
+
+</body>
+</html>

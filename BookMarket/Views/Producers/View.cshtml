@@ -1,0 +1,204 @@
+﻿
+@{
+    ViewData["Title"] = "View";
+}
+
+<h1>View</h1>
+
+@model Producer
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .producer-details {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .producer-logo {
+            max-width: 150px;
+            max-height: 150px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+
+        .Writer-Photo {
+            max-width: 100px;
+            max-height: 100px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            align-items:center;
+        }
+
+        .book-card {
+            width:300px;
+            height:auto;
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: background-color 0.3s ease;
+        }
+
+        .notification {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            z-index: 1000;
+            display: none;
+        }
+
+        .success {
+            background-color: green;
+            color: white;
+        }
+
+        .failure {
+            background-color: red;
+            color: white;
+        }
+
+         .book-card:hover {
+            background-color: #f8f9fa;
+          }
+
+        .no-books-message {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .bookPicture {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+            .bookPicture:hover {
+                transform: scale(1.05);
+                box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+            }
+
+        .button-container {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="notificationArea" class="notification" style="display:none;"></div>
+
+    <div class="container">
+
+        <div class="producer-details">
+            <h1>@Model.Name</h1>
+            <img src="@Model.LogoUrl" alt="Producer Logo" class="producer-logo">
+            <p>@Model.Description</p>
+        </div>
+
+        <h2>Books by @Model.Name</h2>
+        @if(Model.Books != null && Model.Books.Count()>0)
+        {
+@*             if (TempData["Notification"] != null)
+            {
+                if (TempData["Notification"].ToString() == "failed")
+                {
+
+                }
+                else
+                {
+                    
+                }
+            } *@
+            <div class="row">
+                @foreach (var book in Model.Books)
+                {
+                    <div class="col-md-6">
+                        <div class="book-card">
+                            <h3>@book.Name</h3>
+                            <p>Description: @book.Description</p>
+                            <p>Cost: @book.Cost</p>
+                            <img src="@book.PictureUrl" class="bookPicture"/>
+                            <hr />
+                            <div class="text-center">
+                            <img src="@book.Writer.ProfilePictureUrl" alt="Writer Photo" class="Writer-Photo" />
+                            <p>Writer: @book.Writer.Name</p>
+                            </div>
+                            <div class="button-container">
+                                <a href="@Url.Action("AddOrder","Producers",new {BookId=book.Id})" class="btn btn-outline-success">Add to bag</a>
+                            </div>
+
+                        </div>
+
+                    </div>
+                }
+
+            </div>
+        }
+        else
+        {
+            <div class="no-books-message">
+                <p>No books available yet.</p>
+            </div>
+        }
+
+
+    </div>
+    @if (TempData["Notification"] != null)
+    {
+        <script>
+            $(document).ready(function () {
+                var notificationArea = $("#notificationArea");
+                var notificationText = "";
+
+                // Check if notification is success or failure
+                if ("@TempData["Notification"]" == "success") {
+                    notificationText = "Operation succeeded!";
+                    notificationArea.addClass("success");
+                } else {
+                    notificationText = "Operation failed!";
+                    notificationArea.addClass("failure");
+                }
+
+                // Show notification
+                notificationArea.text(notificationText).fadeIn();
+
+                // Hide notification after 1 second
+                setTimeout(function () {
+                    notificationArea.fadeOut();
+                }, 1000);
+            });
+        </script>
+    }
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+

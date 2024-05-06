@@ -1,0 +1,135 @@
+﻿@using BookMarket.Models.Enums
+@model Book
+@{
+    ViewData["Title"] = "EditBook";
+}
+
+<h1>EditBook</h1>
+
+
+
+@*         public int Id { get; set; }
+        public string Name { get; set; }
+        public decimal Cost { get; set; }
+        public BookCategory Kind { get; set; }
+        public string PictureUrl { get; set; }
+        public string Description { get; set; }
+        public int WriterId { get; set; }
+        public int ProducerId { get; set; }
+        public int SellingTimes { get; set; }
+        public Producer Producer { get; set; }
+        public Writer Writer { get; set; }  *@
+<style>
+    .mb-3 img {
+        margin: 0 auto;
+        display: block;
+    }
+
+</style>
+<div class="mb-3">
+    <img id="previewImage" src="" alt="Preview Image" style="display: none; width: 200px; height: 300px;">
+</div>
+<form action="@Url.Action("ConfirmEditingBooks", "Books")" method="post">
+    <input type="text" class="form-control" value="@Model.Id" id="ID" name="Id" hidden>
+
+    <div class="mb-3">
+        <label for="image" class="form-label">Picture (Image URL):</label>
+        <input type="text" value="@Model.PictureUrl" class="form-control" id="PictureUrl" name="PictureUrl" required>
+    </div>
+    <div class="mb-3">
+        <label for="name" class="form-label">Name:</label>
+        <input type="text" value="@Model.Name" class="form-control" id="name" name="Name" required>
+    </div>
+
+    <div class="mb-3">
+        <label for="description" class="form-label">Description:</label>
+        <textarea class="form-control" id="description" name="Description" rows="4" required>@Model.Description</textarea>
+    </div>
+    <div class="mb-3">
+        <label for="Cost" class="form-label">Cost:</label>
+        <input type="number" value="@Model.Cost" class="form-control" id="cost" name="Cost" step="any" required>
+    </div>
+    <div class="mb-3">
+        <label for="Kind" class="form-label">Kind:</label>
+        <select class="form-select-sm" id="kind" name="Kind" required>
+
+            @foreach (var item in Enum.GetNames<BookCategory>())
+            {
+                if (item == Model.Kind.ToString())
+                {
+                    <option selected>@item</option>
+
+                }
+                else
+                {
+                    <option>@item</option>
+                }
+            }
+        </select>
+    </div>
+    <div class="mb-3">
+        <label for="PName" class="form-label">Producer Name:</label>
+        <select class="form-select-sm" id="ProducerId" name="ProducerId" required>
+            @{
+                List<dynamic> arr = new();
+            }
+
+            @foreach (var item in (List<Producer>)TempData["Producer"])
+            {
+                if (!arr.Contains(item.Name))
+                {
+                    arr.Add(item.Name);
+                    if(item.Name == Model.Producer.Name)
+                    {
+                        <option value="@item.Id" selected>@item.Name</option>
+                    }
+                    else
+                    {
+                        <option value="@item.Id">@item.Name</option>
+
+                    }
+                }
+            }
+        </select>
+    </div>
+    <div class="mb-3">
+        <label for="WName" class="form-label">Writer Name:</label>
+        <select class="form-select-sm" id="WriterId" name="WriterId" required>
+            @{
+                List<dynamic> arr1 = new();
+            }
+
+            @foreach (var item in (List<Writer>)TempData["Writer"])
+            {
+                if (!arr1.Contains(item.Name))
+                {
+                    arr1.Add(item.Name);
+                    if (item.Name == Model.Writer.Name)
+                    {
+                        <option value="@item.Id" selected>@item.Name</option>
+
+                    }
+                    else
+                    {
+                        <option value="@item.Id">@item.Name</option>
+                    }
+
+                }
+            }
+        </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <script>
+        const pictureUrlInput = document.getElementById('PictureUrl');
+        const previewImage = document.getElementById('previewImage');
+
+        pictureUrlInput.addEventListener('paste', (event) => {
+            const pastedData = (event.clipboardData || window.clipboardData).getData('text');
+            if (pastedData.startsWith('http') || pastedData.startsWith('https')) {
+                previewImage.src = pastedData;
+                previewImage.style.display = 'block';
+            }
+        });
+    </script>
+
+</form>

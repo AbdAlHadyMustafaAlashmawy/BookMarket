@@ -1,0 +1,116 @@
+﻿@using BookMarket.Models.Helpers
+@model IEnumerable<Bag>
+@{
+    ViewData["Title"] = "Index";
+}
+<style>
+    .table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+    }
+
+        .table th,
+        .table td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .table thead th {
+            background-color: #343a40;
+            color: #fff;
+        }
+
+        .table tbody tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+    #total-price {
+        position: relative; 
+        bottom: 20px;
+        right: 20px; 
+        text-align: right; 
+        padding: 10px 20px;
+        background-color: #f2f2f2; 
+        border: 1px solid #ddd; 
+        border-radius: 5px;
+        font-weight: bold;
+    }
+
+    #total-amount {
+        color: #343a40;
+    }
+
+    .expanded-logo {
+        width: 50px; 
+        height: 50px;
+        overflow: hidden;
+        border-radius: 50%;
+    }
+
+        .expanded-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+            transition: transform 0.3s ease;
+        }
+
+            .expanded-logo img:hover {
+                transform: scale(1.1);
+            }
+
+</style>
+<table class="table table-striped table-hover">
+    <thead class="thead-dark">
+        <tr>
+            <th>Logo</th>
+            <th>Book_Name</th>
+            <th>User_Name</th>
+            <th>Cost</th>
+            <th>Buying_Date</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            var context = new AppDbContext(Helper._configurationPub);
+        }
+        @{
+            if (Model.Any())
+            {
+                foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            <div class="expanded-logo">
+                                <img src="@context.Books.FirstOrDefault(x=>x.Id==item.BookId)?.PictureUrl" alt="Expanded Logo" />
+                            </div>
+                        </td>
+                        <td>@context.Books.FirstOrDefault(x => x.Id == item.BookId)?.Name</td>
+                        <td>@context.Accounts.FirstOrDefault(x=>x.Id==item.AccountId)?.UserName</td>
+                        <td>@item.cost</td>
+                        <td>@item.Buying_Date</td>
+                        <td>
+                            <div class="btn-group" role="group">
+
+                                <a href="@Url.Action("View","Books",new { id = @item.BookId })" class="btn btn-success">View</a>
+                                <a href="@Url.Action("DeleteBook","Bag",new { id = @item.Id })" class="btn btn-danger">Delete</a>
+                                <a href="@Url.Action("DeleteBook","Bag",new { id = @item.Id })" class="btn btn-dark">Buy</a>
+
+                            </div>
+                        </td>
+                    </tr>
+                }
+            }
+           
+}
+        <div id="total-price" class="floating-button">
+            Total Price: <span id="total-amount">@Model.Sum(x => x.cost)</span> L.E.
+        </div>
+    </tbody>
+
+
+
+

@@ -1,0 +1,73 @@
+﻿@model Writer
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Profile</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .profile {
+            background-color: #8B4513; /* Brown color */
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            color: #fff; /* White text color */
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .profile-picture {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%; /* Making the profile picture circular */
+            margin-bottom: 20px;
+            border: 5px solid #fff; /* White border around the picture */
+        }
+        .name {
+            margin-bottom: 10px;
+        }
+        .description {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .additional-info {
+            text-align: left;
+        }
+        .additional-info p {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="profile">
+            <img src="@Model.ProfilePictureUrl" alt="@Model.ProfilePictureUrl" class="profile-picture">
+            <h2 class="name">@Model.Name</h2>
+            <p class="description">@Model.Description</p>
+            <div class="additional-info">
+                <p><strong>BirthYear:</strong> @Model.BirthDay.ToString("yyyy")</p>
+                <p><strong>Religion:</strong> @Model.Religion</p>
+                @if (!Model.DeadOrAlive)
+                {
+                    <strong><p style="color:darkred">Dead</p></strong>
+                }
+                else
+                {
+                    <strong> <p style="color:green">Alive</p></strong>
+                }
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,57 @@
+﻿@model Producer
+@{
+    ViewData["Title"] = "EditProducer";
+}
+<head>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.12/jquery.validate.unobtrusive.min.js"></script>
+</head>
+<h1>Edit Producer</h1>
+
+<form action="@Url.Action("ConfirmEditProducer", "Producers")" method="post">
+    <input type="hidden" asp-for="@Model.Id" />  <div class="mb-3">
+    <div class="mb-3">
+        <label for="image" class="form-label">Picture (Image URL):</label>
+        <input type="text" asp-for="@Model.LogoUrl" value="@Model.LogoUrl" class="form-control" id="LogoUrl" name="LogoUrl" required>
+        <span asp-validation-for="@Model.LogoUrl" style="color:red"></span>
+
+    </div>
+    <div class="mb-3">
+        <label for="name" class="form-label">Name:</label>
+        <input type="text" class="form-control" value="@Model.Name" id="name" name="Name" required>
+            <span asp-validation-for="@Model.Name" style="color:red"></span>
+
+    </div>
+
+    <div class="mb-3">
+        <label for="description" class="form-label">Description:</label>
+        <textarea class="form-control" id="description" name="Description" rows="4" required>@Model.Description</textarea>
+            <span asp-validation-for="@Model.Description" style="color:red"></span>
+
+    </div>
+        <button type="submit" class="btn btn-primary">Save Changes</button>
+</form>
+@section Scripts{
+    <script>
+            $(document).ready(function () {
+            // Initialize form validation
+            $('form').validate({
+                onkeyup: false, // Disable validation on keyup to prevent instant validation on typing
+                onfocusout: false // Disable validation on focus out to prevent instant validation when leaving the field
+            });
+
+            // Trigger validation on input change
+            $('input').on('input', function () {
+                $(this).valid(); // Trigger validation for the current input field
+            });
+        });
+    </script>
+
+}
+
+
+
+
+

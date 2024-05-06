@@ -1,0 +1,114 @@
+﻿@model Book
+@{
+    ViewData["Title"] = "View";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(to bottom, green, black);
+        }
+        /* Custom CSS for Book View */
+        .book-details {
+            max-width: 600px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+       
+
+        .book-image {
+            width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+            transition: filter 0.3s ease-in-out;
+            border:solid 8px blue;
+        }
+
+            .book-image:hover {
+                filter: grayscale(100%) sepia(100%) hue-rotate(180deg); /* Change color of the image on hover */
+            }
+
+            .book-details{
+                color:white;
+            }
+
+
+        .book-details:hover h1 {
+            transform: translateY(-20px); /* Move the title up on hover */
+            opacity: 0; /* Hide the title on hover */
+            
+        }
+
+        .book-details h1 {
+            transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        }
+        .book-kind {
+            color: green;
+        }
+
+        .writer-info, .producer-info {
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+            .writer-info img, .producer-info img {
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                margin-right: 10px;
+            }
+    </style>
+</head>
+<body>
+    @if (TempData["Notification"] != null)
+    {
+        <div class="alert alert-success" role="alert">
+            @TempData["Notification"]
+        </div>
+    }
+    <div class="container">
+        <div class="book-details">
+            <h1>@Model.Name</h1>
+            <img src="@Model.PictureUrl" class="book-image" alt="Book Cover">
+            <p>
+                @if(Model.Kind.ToString() == "Islamic")
+                {
+                    <span class="book-kind">@Model.Kind</span>
+                }
+                else
+                {
+                    @Model.Kind
+                }
+            </p>
+            <p>@Model.Description</p>
+            <p>Cost: @Model.Cost L.E.</p>
+            <p>Selling Times: @Model.SellingTimes</p>
+            <div class="writer-info">
+                <img src="@Model.Writer.ProfilePictureUrl" alt="Writer's Profile Picture">
+                <div>
+                    <p>@Model.Writer.Name</p>
+                    <p>@Model.Writer.Description</p>
+                </div>
+            </div>
+            <div class="producer-info">
+                <img src="@Model.Producer.LogoUrl" alt="Producer's Logo">
+                <div>
+                    <p>@Model.Producer.Name</p>
+                    <p>@Model.Producer.Description</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+

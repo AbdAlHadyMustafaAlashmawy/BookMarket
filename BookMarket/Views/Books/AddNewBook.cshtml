@@ -1,0 +1,135 @@
+﻿@using BookMarket.Models.Enums
+@model IEnumerable<Book>
+@{
+    ViewData["Title"] = "AddNewBook";
+}
+
+<h1>AddNewBook</h1>@* 
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public decimal Cost { get; set; }
+        public BookCategory Kind { get; set; }
+        public string PictureUrl { get; set; }
+        public string Description { get; set; }
+        public int WriterId { get; set; }
+        public int ProducerId { get; set; }
+        public int SellingTimes { get; set; }
+        public Producer Producer { get; set; }
+        public Writer Writer { get; set; } *@
+        <head>
+                <style>
+            .mb-3 img {
+                margin: 0 auto;
+                display: block;
+            }
+
+                </style>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.12/jquery.validate.unobtrusive.min.js"></script>
+
+        </head>
+<div class="mb-3">
+    <img id="previewImage" src="" alt="Preview Image" style="display: none; width: 200px; height: 300px;">
+</div>
+<form action="@Url.Action("ConfirmAddingBook", "Books")" method="post">
+    <div class="mb-3">
+        <label for="image" class="form-label">Picture (Image URL)</label>
+        <input type="text" asp-for="@Model.First().PictureUrl" value="@(((Book)(ViewBag.book))?.PictureUrl)" class="form-control" id="PictureUrl" name="PictureUrl" required>
+        <span asp-validation-for="@Model.First().PictureUrl" style="color:red"></span>
+    </div>
+    <div class="mb-3">
+        <label for="name" class="form-label">Name:</label>
+        <input type="text" asp-for="@Model.First().Name" value="@(((Book)(ViewBag.book))?.Name)" class="form-control" id="name" name="Name" required>
+        <span asp-validation-for="@Model.First().Name" style="color:red"></span>
+
+    </div>
+
+    <div class="mb-3">
+        <label for="description" class="form-label">Description:</label>
+        <textarea class="form-control" data-val="true" data-val-required="Description is required" id="description" name="Description" rows="4" required>@(((Book)(ViewBag.book))?.Description)</textarea>
+        <span asp-validation-for="@Model.First().Description" style="color:red"></span>
+
+    </div>
+    <div class="mb-3">
+        <label for="Cost" class="form-label">Cost:</label>
+        <input type="number" asp-for="@Model.First().Cost" value="@(((Book)(ViewBag.book))?.Cost)" class="form-control" id="cost" name="Cost" step="any" required>
+        <span asp-validation-for="@Model.First().Cost" style="color:red"></span>
+
+    </div>
+    <div class="mb-3">
+        <label for="Kind" class="form-label">Kind:</label>
+        <select class="form-select-sm" id="kind" name="Kind" required>
+
+
+            @foreach (var item in Enum.GetNames<BookCategory>())
+            {
+                <option>@item</option>
+            }
+        </select>
+    </div>
+    <div class="mb-3">
+        <label for="PName" class="form-label">Producer Name:</label>
+        <select class="form-select-sm" id="ProducerId" name="ProducerId" required>
+            @{
+                List<dynamic> arr = new();
+            }
+
+            @foreach (var item in (List<Producer>)TempData["Producer"])
+            {
+                if (!arr.Contains(item.Name))
+                {
+                    arr.Add(item.Name);
+                    <option value="@item.Id">@item.Name</option>
+
+                }
+            }
+        </select>
+    </div>
+    <div class="mb-3">
+        <label for="WName" class="form-label">Writer Name:</label>
+        <select class="form-select-sm" id="WriterId" name="WriterId" required>
+            @{
+                List<dynamic> arr1 = new();
+            }
+
+            @foreach (var item in (List<Writer>)TempData["Writer"])
+            {
+                if (!arr1.Contains(item.Name))
+                {
+                    arr1.Add(item.Name);
+                    <option value="@item.Id">@item.Name</option>
+
+                }
+            }
+        </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+    
+
+</form>
+
+    <script>
+        const pictureUrlInput = document.getElementById('PictureUrl');
+        const previewImage = document.getElementById('previewImage');
+
+        pictureUrlInput.addEventListener('paste', (event) => {
+            const pastedData = (event.clipboardData || window.clipboardData).getData('text');
+            if (pastedData.startsWith('http') || pastedData.startsWith('https')) {
+                previewImage.src = pastedData;
+                previewImage.style.display = 'block'; 
+            }
+        });
+        $(document).ready(function () {
+            // Initialize form validation
+            $('form').validate({
+                onkeyup: false, // Disable validation on keyup to prevent instant validation on typing
+                onfocusout: false // Disable validation on focus out to prevent instant validation when leaving the field
+            });
+
+            // Trigger validation on input change
+            $('input').on('input', function () {
+                $(this).valid(); // Trigger validation for the current input field
+            });
+        });
+    </script>
