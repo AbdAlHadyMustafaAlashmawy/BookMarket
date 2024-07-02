@@ -1,28 +1,18 @@
-﻿@using PagedList
-@using PagedList.Mvc
-@model IEnumerable<Book>
-@{
-    ViewData["Title"] = "Index";
-}
-
-
-
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book Cards</title>
+
     <style>
-        body{
+        body {
             background: #f4fff4;
-            color:#333;
+            color: #333;
         }
+
         .book-card {
-            /* background-color:brown; */
-            
             width: 270px;
-            /* border: 3px solid #ddd; */
             border-radius: 5px;
             margin: 10px;
             padding: 10px;
@@ -35,15 +25,17 @@
             width: 100%;
             height: 290px;
             margin-bottom: 10px;
-            padding-bottom:10px;
-            border-bottom:1px solid #ddd;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #ddd;
         }
+
         .book-title {
             font-weight: bold;
             font-size: 16px;
             margin-bottom: 5px;
-            text-align:center;
+            text-align: center;
         }
+
         .book-description {
             font-size: 14px;
             color: white;
@@ -58,10 +50,10 @@
             position: absolute;
             bottom: 10px;
             left: 50%;
-            transform: translateX(-10%); 
+            transform: translateX(-10%);
         }
 
-        .button-container_view{
+        .button-container_view {
             position: absolute;
             bottom: 10px;
             left: 50%;
@@ -83,7 +75,6 @@
             margin-bottom: 10px;
         }
 
-
         form {
             border-radius: 7px;
             padding: 10px;
@@ -95,42 +86,42 @@
             color: transparent;
         }
 
-        .book-description{
-            overflow:hidden;
-            height:40px;
-            width:100%;
-
-            
+        .book-description {
+            overflow: hidden;
+            height: 40px;
+            width: 100%;
         }
 
-        .book-writer{
+        .book-writer {
             overflow: hidden;
             height: 50px;
             width: 100%;
         }
 
         .filter-container {
-            display:flex;
-            flex-wrap:wrap;
-            justify-content:space-around;
-            align-items:center;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
         }
 
-        .filter-container > div {
-            width:22%;
-            min-width:175px;
-        }
+            .filter-container > div {
+                width: 22%;
+                min-width: 175px;
+            }
 
     </style>
-    
-        <link rel="stylesheet" href="~/lib/sweetalert2/dist/sweetalert2.min.css" />
-        <script src="~/lib/sweetalert2/dist/sweetalert2.min.js"></script>
-    
-        </head>
+
+    <!-- Correct SweetAlert2 CDN links -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
 <body>
-    <form action="@Url.Action("FiltersForIndex","Books")" method="post" id="filter">
+    <form action="@Url.Action("FiltersForIndex", "Books")" method="post" id="filter">
         <legend>Filters</legend>
-       <div class="filter-container">
+        <div class="filter-container">
             <div>
                 <label for="Name">Name of the book </label>
                 <input type="text" name="Name" id="Name" style="color:black" />
@@ -144,9 +135,7 @@
                 <input type="text" id="MinCost" placeholder="Min" name="MinCost" />
             </div>
             <div>
-                <label>
-                    kind
-                </label>
+                <label>kind</label>
                 <select class="form-select" name="Kind" aria-label="Kind">
                     @{
                         List<dynamic> arr = new();
@@ -158,21 +147,21 @@
                         {
                             arr.Add(item.Kind);
                             <option>@item.Kind</option>
-
                         }
                     }
                     <option selected>All</option>
-
                 </select>
             </div>
-       </div>
+        </div>
 
-        
         <br />
         <input value="Search" name="Search" style="width:100%" type="submit" class="btn btn-outline-primary" />
     </form>
 
     <a asp-action="CRUD" class="btn btn-primary">CRUD books</a>
+    <div>
+        <span id="bag-count">@ViewBag.BagCount</span>
+    </div>
     <div class="container">
         @foreach (var book in Model)
         {
@@ -186,27 +175,61 @@
                 <div class="book-producer">Producer: @book.Producer.Name</div>
                 <div class="book-writer">Writer: @book.Writer.Name</div>
                 <div class="card-footer d-flex align-items-center justify-content-around py-3">
-                   
-                        <a href="@Url.Action("AddOrder","Bag",new {BookId=book.Id})" onclick="showSuccessAlert()" class="btn btn-primary">Add to bag</a>
-
-
-                        <a href="@Url.Action("View","Books",new { id = @book.Id })" class="btn btn-success">View</a>
-
-                    </div>
-
-                    </div>
-
+                    <a href="javascript:void(0);" data-book-id="@book.Id" class="btn btn-primary add-to-bag">Add to bag</a>
+                    <a href="@Url.Action("View", "Books", new { id = @book.Id })" class="btn btn-success">View</a>
+                </div>
+            </div>
         }
     </div>
+
     <script>
-            function showSuccessAlert() {
-                Swal.fire({
-                    title: 'Successfully added!',
-                    text: 'Book Added To Bag!',
-                    icon: 'success'
+        $(document).ready(function () {
+            $('.add-to-bag').click(function () {
+                var bookId = $(this).data('book-id');
+
+                $.ajax({
+                    url: '@Url.Action("AddOrder", "Bag")',
+                    type: 'POST',
+                    data: {
+                        BookId: bookId,
+                        __RequestVerificationToken: $('input[name="__RequestVerificationToken"]').val()
+                    },
+                    success: function (response) {
+                        Swal.fire({
+                            title: 'Successfully added!',
+                            text: 'Book Added To Bag!',
+                            icon: 'success'
+                        });
+                        // Increment the bag count by one
+                        var currentCount = parseInt($('#bag-count').text());
+                        $('#bag-count').text(currentCount + 1);
+                        updateBagItemCount();
+
+                    },
+                    error: function (xhr, status, error) {
+                        Swal.fire({
+                            title: 'Error!',
+                            text: 'There was an issue adding the book to the bag.',
+                            icon: 'error'
+                        });
+                    }
                 });
+            });
+        });
+        document.addEventListener("DOMContentLoaded", function () {
+            function updateBagItemCount() {
+                fetch('/api/Bag/count')
+                    .then(response => response.json())
+                    .then(data => {
+                        document.getElementById('bagItemCount').innerText = data;
+                    })
+                    .catch(error => console.error('Error fetching bag item count:', error));
             }
 
+            updateBagItemCount();
+
+            setInterval(updateBagItemCount, 60000); 
+        });
     </script>
 </body>
 </html>

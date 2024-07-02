@@ -39,6 +39,9 @@ namespace BookMarket.Migrations
                     b.Property<string>("Gmail")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<byte[]>("Image")
+                        .HasColumnType("varbinary(max)");
+
                     b.Property<string>("Password")
                         .HasColumnType("nvarchar(max)");
 

@@ -1,4 +1,5 @@
 ﻿using BookMarket.Models;
+using BookMarket.Models.DTOs;
 using BookMarket.Models.Helpers;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -8,17 +9,44 @@ namespace BookMarket.Controllers
 {
     public class BagController:Controller
     {
-        public IActionResult Index(Bag bag)
+        [HttpGet("count")]
+        public ActionResult<int> GetBagElementsNum()
         {
-            using(var context = new AppDbContext(Helper._configurationPub))
+            using (AppDbContext context = new AppDbContext(Helper._configurationPub))
             {
-                var name = HttpContext.Request.Cookies["UserName"].ToString();
-                var orders = context.Bag.Include(x => x.Books).Include(x => x.Account).Where(x => x.Account.UserName == name).ToList();
-                //context.Bag.Include(x => x.Books).Include(x => x.Account).Where(x => x.Account.UserName == name).SelectMany(x => x.Books).Sum(x=>x.Cost);
-                return View(orders);
-
+                int count = context.Bag.Count();
+                return Ok(count);
             }
         }
+
+        public IActionResult Index(Bag bag)
+        {
+            using (var context = new AppDbContext(Helper._configurationPub))
+            {
+                var name = HttpContext.Request.Cookies["UserName"];
+                if (name == null)
+                {
+                    // Handle the case when the cookie is not found or user is not logged in
+                    return RedirectToAction("Login", "Account");
+                }
+
+                var groupedOrders = context.Bag
+                    .Include(x => x.Books)
+                    .Include(x => x.Account)
+                    .Where(x => x.Account.UserName == name)
+                    .GroupBy(x => x.BookId)
+                    .Select(g => new GroupedOrderByIdDTO
+                    {
+                        BookId = g.Key,
+                        Count = g.Count(),
+                        Orders = g.ToList()
+                    })
+                    .ToList();
+
+                return View(groupedOrders);
+            }
+        }
+
         public IActionResult DeleteBook(int id)
         {
             using (var context = new AppDbContext(Helper._configurationPub))

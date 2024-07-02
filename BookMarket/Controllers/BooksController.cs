@@ -1,5 +1,6 @@
 ﻿using BookMarket.Models;
 using BookMarket.Models.Enums;
+using BookMarket.Repos;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using NuGet.Protocol;
@@ -11,21 +12,25 @@ namespace BookMarket.Controllers
     public class BooksController:Controller
     {
         private readonly AppDbContext _context;
-
+        private readonly BooksRepository _booksRepo;
+        private readonly ProducersRepository _ProducersRepo;
+        private readonly WritersRepository _writersRepo;
         public BooksController(AppDbContext context)
         {
             _context = context;
+            _ProducersRepo = new ProducersRepository();
+            _booksRepo = new BooksRepository();
+             _writersRepo=new WritersRepository();
         }
         public async Task<IActionResult> Index()
         {
-            var Books = await _context.Books.Include(x=>x.Writer).Include(x=>x.Producer).ToListAsync();
-            TempData["books"] = _context.Books.ToList();
-
+            var Books = await _booksRepo.GetWholeAsync();
+            TempData["books"] = _booksRepo.GetWhole();
             return View(Books);
         }
         public IActionResult View(int id)
         {
-            var book = _context.Books.Include(x=>x.Producer).Include(x=>x.Writer).FirstOrDefault(x => x.Id == id);
+            var book = _booksRepo.GetById(id);
             return View(book);
         }
         public IActionResult ConfirmAddingBook(Book book)
@@ -33,9 +38,9 @@ namespace BookMarket.Controllers
             //TempData["Producer1"] = _context.Producers.ToList();
             //TempData["Writer1"] = _context.Writers.ToList();
             ViewBag.book = book;
-            TempData["Producer"] = _context.Producers.ToList();
-            TempData["Writer"] = _context.Writers.ToList();
-            var books = _context.Books.ToList();
+            TempData["Producer"] = _ProducersRepo.GetAll();
+            TempData["Writer"] = _writersRepo.GetAll();
+            var books = _booksRepo.GetAll();
             if (book is null)
             {
                 return View("NotFound");
@@ -47,52 +52,55 @@ namespace BookMarket.Controllers
             }
             else
             {
-                _context.Books.Add(book);
-                _context.SaveChanges();
+                _booksRepo.Insert(book);
                 return RedirectToAction("CRUD");
             }
 
         }
         public IActionResult DeleteBook(int id)
         {
-           var book= _context.Books.FirstOrDefault(x => x.Id == id);
-            _context.Remove(book);
-            _context.SaveChanges();
+            var book = _booksRepo.GetById(id);
+            _booksRepo.Remove(book);
             return RedirectToAction("CRUD");
         }
         public IActionResult EditBook(int id)
         {
-            var book = _context.Books.FirstOrDefault(x => x.Id == id);
-            TempData["Producer"] = _context.Producers.ToList();
-            TempData["Writer"] = _context.Writers.ToList();
+            var book = _booksRepo.GetById(id);
+            TempData["Producer"] = _ProducersRepo.GetAll();
+            TempData["Writer"] = _writersRepo.GetAll();
             return View(book);
         }
+        [HttpPost]
+        public JsonResult AddOrder(int BookId)
+        {
+            // Your logic to add the book to the bag
+            return Json(new { success = true });
+        }
+
         public IActionResult ConfirmEditingBooks(Book book)
         {
      
             if (ModelState.IsValid)
             {
-            _context.Books.Update(book);
-            _context.SaveChanges();
-            return RedirectToAction("CRUD");
+                _booksRepo.Update(book);
+                return RedirectToAction("CRUD");
             }
             else
             {
                 return View("AddNewBook",book);
-
             }
         }
         public IActionResult AddNewBook()
         {
-            var books = _context.Books.Include(x=>x.Writer).Include(x=>x.Producer).ToList();
-            TempData["Producer"] = _context.Producers.ToList();
-            TempData["Writer"] = _context.Writers.ToList();
+            var books = _booksRepo.GetWhole();
+            TempData["Producer"] = _ProducersRepo.GetAll();
+            TempData["Writer"] = _writersRepo.GetAll();
             return View(books);
         }
         public async Task<IActionResult> CRUD(string Kind,int MaxCost=1000000,int MinCost=0,string Name= null,int pageNo= 1,int NoOfRecordsPerPage=0)
         {
             IQueryable<Book> booksQuery = _context.Books;
-            TempData["books"] = _context.Books.ToList();
+            TempData["books"] = _booksRepo.GetAll();
             if (!string.IsNullOrEmpty(Kind))
             {
                 if (Enum.TryParse<BookCategory>(Kind, out BookCategory category))

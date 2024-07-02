@@ -13,9 +13,9 @@ namespace BookMarket
         public static void Main(string[] args)
         {
             // Your data insertion methods
-            Helper.ProducersDataInsertion();
-            Helper.WritersDataInsertion();
-            Helper.BooksDataInsertion();
+            //Helper.ProducersDataInsertion();
+            //Helper.WritersDataInsertion();
+            //Helper.BooksDataInsertion();
 
             // Create the web host builder
             var builder = WebApplication.CreateBuilder(args);
@@ -42,10 +42,13 @@ namespace BookMarket
 
             app.UseRouting();
             app.UseAuthorization();
-
+            app.MapControllerRoute(
+                name:"MyRoute", "DisplayMyBag/{action=Index}",
+                new { controller="Bag"}
+                );
             app.MapControllerRoute(
                 name: "default",
-                pattern: "{controller=Home}/{action=Index}/{id?}");
+                pattern: "{controller=Account}/{action=LoginP}");
 
             app.Run();
         }

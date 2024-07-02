@@ -1,7 +1,8 @@
 ﻿@using BookMarket.Models
 @model Account
+
 @{
-    ViewData["Title"] = "UserAccount";
+    ViewData["Title"] = "User Account";
 }
 
 <h1>User Account</h1>
@@ -81,9 +82,9 @@
         transition: background-color 0.3s;
     }
 
-        .upload-btn:hover {
-            background-color: #0056b3;
-        }
+    .upload-btn:hover {
+        background-color: #0056b3;
+    }
 
     @@media (max-width: 767px) {
         .col-md-6 {
@@ -91,7 +92,6 @@
             margin-bottom: 20px;
         }
     }
-
 </style>
 
 <script>
@@ -112,29 +112,6 @@
         }
     }
 
-    function saveChanges() {
-        // Trigger upload via AJAX
-        var formData = new FormData();
-        var file = document.getElementById('imageFile').files[0];
-        formData.append('file', file);
-
-        // Send AJAX request
-        fetch('@Url.Action("Upload", "Account")', {
-            method: 'POST',
-            body: formData
-        })
-            .then(response => {
-                if (response.ok) {
-                    // If upload successful, reload the page to display the uploaded image
-                    location.reload();
-                } else {
-                    // Handle error
-                    console.error('Upload failed');
-                }
-            })
-            .catch(error => console.error('Error:', error));
-    }
-
     // Call previewFile when file input changes
     document.getElementById('imageFile').addEventListener('change', previewFile);
 
@@ -143,7 +120,8 @@
         previewFile();
     }
 </script>
-<form id="accountForm" method="post" action="@Url.Action("SaveChanges", "Account")">
+
+<form id="accountForm" method="post" enctype="multipart/form-data">
     <hr />
     <div class="row">
         @using (Html.BeginForm("Upload", "Account", FormMethod.Post, new { enctype = "multipart/form-data" }))
@@ -151,7 +129,11 @@
             <div class="col-md-6">
                 @if (!string.IsNullOrEmpty(Model.Uploaded_Photo_URl))
                 {
-                    <img src=$"~@Url.Content(Model.Uploaded_Photo_URl)" id="previewImage" class="profile-pic" />
+                    <img src="@Model.Uploaded_Photo_URl" id="previewImage" class="profile-pic" />
+                }
+                else if (Model.Image != null)
+                {
+                    <img src="data:image/jpeg;base64,@Convert.ToBase64String(Model.Image)" id="previewImage" class="profile-pic" />
                 }
                 else
                 {
@@ -159,7 +141,7 @@
                 }               
                 <legend>Upload Image</legend>
                 <div>
-                    <input type="file" id="imageFile" asp-for="@Model.facebookAcct" name="file" accept=".jpg" class="upload-btn" onchange="previewFile()" />
+                    <input type="file" id="imageFile" name="file" accept=".jpg" class="upload-btn" onchange="previewFile()" />
                 </div>
             </div>
         }
@@ -167,36 +149,35 @@
         <div class="col-md-6">
             <div class="form-group">
                 <label for="UserName">Username:</label>
-                <input type="text" class="form-control" id="UserName" asp-for=UserName value="@Model.UserName" readonly />
+                <input type="text" class="form-control" id="UserName" name="UserName" value="@Model.UserName" readonly />
             </div>
             <div class="form-group">
                 <label for="PhoneNumber">Phone Number:</label>
-                <input type="text" class="form-control" id="PhoneNumber" asp-for=PhoneNumber value="@Model.PhoneNumber" readonly />
+                <input type="text" class="form-control" id="PhoneNumber" name="PhoneNumber" value="@Model.PhoneNumber" />
             </div>
             <div class="form-group">
                 <label for="Gmail">Gmail:</label>
-                <input type="text" class="form-control" id="Gmail" asp-for=Gmail value="@Model.Gmail" readonly />
+                <input type="text" class="form-control" id="Gmail" name="Gmail" value="@Model.Gmail" readonly />
             </div>
             <div class="form-group">
                 <label for="Birthday">Birthday:</label>
-                <input type="text" class="form-control" id="Birthday" asp-for=Birthday value="@Model.Birthday.ToString("MM/dd/yyyy")" readonly />
+                <input type="text" class="form-control" id="Birthday" name="Birthday" value="@Model.Birthday.ToString("MM/dd/yyyy")" readonly />
             </div>
             <div class="form-group">
                 <label for="Admin">Admin:</label>
-                <input type="text" class="form-control" id="Admin" asp-for=Admin value="@Model.Admin" readonly />
+                <input type="text" class="form-control" id="Admin" name="Admin" value="@Model.Admin" readonly />
             </div>
             <div class="form-group">
                 <label for="facebookAcct">Facebook Account:</label>
-                <input type="text" class="form-control" id="facebookAcct" value="@Model.facebookAcct" readonly />
+                <input type="text" class="form-control" id="facebookAcct" name="facebookAcct" value="@Model.facebookAcct" readonly />
             </div>
         </div>
     </div>
 
-    <!-- Save Changes button -->
+    <!-- Save Changes button --> 
     <div class="row">
         <div class="col-md-12 text-center">
-            <button type="button" class="btn btn-primary" onclick="saveChanges()">Save Changes</button>
+            <button type="submit" class="btn btn-primary">Save Changes</button>
         </div>
     </div>
 </form>
-

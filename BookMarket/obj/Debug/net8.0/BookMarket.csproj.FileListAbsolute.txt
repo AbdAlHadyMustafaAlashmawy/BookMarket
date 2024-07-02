@@ -559,3 +559,4 @@ C:\Users\bedo\source\repos\BookMarket\BookMarket\bin\Debug\net8.0\PagedList.Mvc.
 C:\Users\bedo\source\repos\BookMarket\BookMarket\bin\Debug\net8.0\PageList.dll
 C:\Users\bedo\source\repos\BookMarket\BookMarket\bin\Debug\net8.0\RestSharp.dll
 C:\Users\bedo\source\repos\BookMarket\BookMarket\bin\Debug\net8.0\SweetAlert2.dll
+C:\Users\bedo\source\repos\BookMarket\BookMarket\obj\Debug\net8.0\BookMarket.sourcelink.json

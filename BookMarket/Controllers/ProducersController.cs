@@ -1,5 +1,6 @@
 ﻿using BookMarket.Models;
 using BookMarket.Models.Helpers;
+using BookMarket.Repos;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
@@ -9,13 +10,17 @@ namespace BookMarket.Controllers
     public class ProducersController : Controller
     {
         private readonly AppDbContext _context;
+        private readonly ProducersRepository _producersRepo;
+        private readonly BooksRepository _booksRepo;
         public ProducersController(AppDbContext context)
         {
             _context= context;
+            _producersRepo = new ProducersRepository();
+            _booksRepo = new BooksRepository();
         }
         public async Task<IActionResult> Index()
         {
-            var Producers = await _context.Producers.ToListAsync();
+            var Producers = await _producersRepo.GetAllAsync();
             return View(Producers);
         }
         public IActionResult CreateProducerForm(Producer producer)
@@ -29,8 +34,7 @@ namespace BookMarket.Controllers
             {
                 try
                 {
-                    _context.Producers.Add(producer);
-                    _context.SaveChanges();
+                    _producersRepo.Insert(producer);
                     return RedirectToAction("Index");
                 }
                 catch (Exception)
@@ -48,7 +52,7 @@ namespace BookMarket.Controllers
         {
             using (var context = new AppDbContext(Helper._configurationPub))
             {
-                var producerID = context.Books.FirstOrDefault(x => x.Id == BookId).ProducerId;
+                var producerID = _producersRepo.GetIdByBookId(BookId);
 
                 Bag bag = new Bag() { BookId = BookId };
                 if (HttpContext.Request.Cookies["ID"] != null && int.TryParse(HttpContext.Request.Cookies["ID"].ToString(), out int accountId))
@@ -63,7 +67,7 @@ namespace BookMarket.Controllers
                         return BadRequest("Invalid or missing account ID.");
                     }
 
-                    bag.cost = (double)context.Books.FirstOrDefault(x => x.Id == BookId).Cost;
+                    bag.cost = (double)_booksRepo.GetById(BookId).Cost;
 
                     context.Bag.Add(bag);
                     context.SaveChanges();
@@ -81,9 +85,8 @@ namespace BookMarket.Controllers
         }
         public  IActionResult DeleteProducer(int id)
         {
-            var entity = _context.Producers.FirstOrDefault(x => x.Id == id);
-            _context.Producers.Remove(entity);
-            _context.SaveChanges();
+            Producer producer = _producersRepo.GetById(id);
+            _producersRepo.Remove(producer);
             return RedirectToAction("Index");
         }
         public async Task<IActionResult> View(int id)
@@ -93,7 +96,7 @@ namespace BookMarket.Controllers
         }
         public async Task<IActionResult> EditProducer(int id)
         {
-            var entity =await _context.Producers.FirstOrDefaultAsync(x => x.Id == id);
+            var entity = await _producersRepo.GetByIdAsync(id);
             return View(entity);
         }
         [HttpPost]
@@ -106,8 +109,7 @@ namespace BookMarket.Controllers
                 {
                     return NotFound();
                 }
-                _context.Producers.Update(producer);
-                _context.SaveChanges();
+                _producersRepo.Update(producer);
                 return RedirectToAction("Index");
             }
             else

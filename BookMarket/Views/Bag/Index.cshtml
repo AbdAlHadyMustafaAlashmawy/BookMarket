@@ -1,5 +1,6 @@
-﻿@using BookMarket.Models.Helpers
-@model IEnumerable<Bag>
+﻿@using BookMarket.Models.DTOs
+@using BookMarket.Models.Helpers
+@model IEnumerable<GroupedOrderByIdDTO>
 @{
     ViewData["Title"] = "Index";
 }
@@ -70,6 +71,7 @@
             <th>User_Name</th>
             <th>Cost</th>
             <th>Buying_Date</th>
+            <th>Books Num</th>
             <th>Actions</th>
         </tr>
     </thead>
@@ -89,15 +91,16 @@
                             </div>
                         </td>
                         <td>@context.Books.FirstOrDefault(x => x.Id == item.BookId)?.Name</td>
-                        <td>@context.Accounts.FirstOrDefault(x=>x.Id==item.AccountId)?.UserName</td>
-                        <td>@item.cost</td>
-                        <td>@item.Buying_Date</td>
+                        <td>@context.Accounts.FirstOrDefault(x=>x.Id==item.Orders.FirstOrDefault().AccountId)?.UserName</td>
+                        <td>@item.Orders.FirstOrDefault().cost</td>
+                        <td>@item.Orders.FirstOrDefault().Buying_Date</td>
+                        <td>@item.Count</td>
                         <td>
                             <div class="btn-group" role="group">
 
                                 <a href="@Url.Action("View","Books",new { id = @item.BookId })" class="btn btn-success">View</a>
-                                <a href="@Url.Action("DeleteBook","Bag",new { id = @item.Id })" class="btn btn-danger">Delete</a>
-                                <a href="@Url.Action("DeleteBook","Bag",new { id = @item.Id })" class="btn btn-dark">Buy</a>
+                                <a href="@Url.Action("DeleteBook","Bag",new { id = @item.Orders.FirstOrDefault(x=>x.BookId==item.BookId).Id})" class="btn btn-danger">Delete</a>
+                                <a href="@Url.Action("DeleteBook","Bag",new { id = @item.BookId })" class="btn btn-dark">Buy</a>
 
                             </div>
                         </td>
@@ -107,7 +110,11 @@
            
 }
         <div id="total-price" class="floating-button">
-            Total Price: <span id="total-amount">@Model.Sum(x => x.cost)</span> L.E.
+            @{
+                var totalAmount = Model.Sum(x => x.Orders.Any() ? x.Orders.FirstOrDefault().cost *(double) x.Orders.Count : 0);
+            }
+
+            <span id="total-amount">@totalAmount</span> L.E.
         </div>
     </tbody>
 

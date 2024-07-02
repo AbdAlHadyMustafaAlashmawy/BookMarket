@@ -9,6 +9,30 @@ namespace BookMarket.Controllers
 {
     public class AccountController : Controller
     {
+        public IActionResult UserAccountMethod(string Sname)
+        {
+            ViewBag.ImgUploaded = false;
+            ViewData["ImageUrl"] = Sname;
+
+            string name = HttpContext.Request.Cookies["UserName"];
+            if (string.IsNullOrEmpty(name))
+            {
+                return Unauthorized();
+            }
+
+            using (var context = new AppDbContext(Helper._configurationPub))
+            {
+                Account UserAccount = context.Accounts.FirstOrDefault(x => x.UserName == name);
+
+                if (UserAccount == null)
+                {
+                    return NotFound();
+                }
+
+                return View(UserAccount);
+            }
+        }
+
 
         public IActionResult LoginP(Account account)
         {
@@ -51,78 +75,51 @@ namespace BookMarket.Controllers
 
         }
         [HttpPost]
-        public IActionResult Upload(IFormFile file)
-        {
-            string name = "";
-            if (file != null && file.Length > 0)
-            {
-                var filename = Path.GetFileName(file.FileName);
-                var path = Path.Combine("images/", filename);
+        [ValidateAntiForgeryToken]
 
-                // Check if the photo is already used by any other user
-                using (var context = new AppDbContext(Helper._configurationPub))
+        public IActionResult Upload([FromForm] IFormFile file, [FromForm] Account acc)
+        {
+            using (var _context = new AppDbContext(Helper._configurationPub))
+            {
+
+
+                if (HttpContext.Request.Cookies.TryGetValue("UserName", out string name))
                 {
-                    var existingAccountWithPhoto = context.Accounts.FirstOrDefault(x => x.Uploaded_Photo_URl == path);
-                    if (existingAccountWithPhoto != null)
+                    var userAccount = _context.Accounts.FirstOrDefault(x => x.UserName == name);
+
+                    if (userAccount == null)
                     {
-                        // Photo is already used, return an error or handle it as you wish
-                        ViewBag.ImgUploaded = false;
-                        ViewBag.ErrorMessage = "This photo is already used by another user.";
-                        return RedirectToAction("UserAccountMethod");
+                        return NotFound();
                     }
+
+                    if (file != null && file.Length > 0)
+                    {
+                        using (var memoryStream = new MemoryStream())
+                        {
+                            file.CopyTo(memoryStream);
+                            userAccount.Image = memoryStream.ToArray();
+                        }
+                    }
+
+                    // Update other properties
+                    userAccount.PhoneNumber = acc.PhoneNumber;
+                    userAccount.Gmail = acc.Gmail;
+                    userAccount.Birthday = acc.Birthday;
+                    userAccount.Admin = acc.Admin;
+                    userAccount.facebookAcct = acc.facebookAcct;
+
+                    _context.Accounts.Update(userAccount);
+                    _context.SaveChanges();
+
+                    ViewBag.ImgUploaded = true;
                 }
 
-                // Photo is not used, proceed with uploading
-                using (var context = new AppDbContext(Helper._configurationPub))
+                else
                 {
-                    var account = context.Accounts.FirstOrDefault(x => x.UserName == HttpContext.Request.Cookies["UserName"].ToString());
-                    account.Uploaded_Photo_URl = path;
-                    context.SaveChanges();
+                    return Unauthorized();
                 }
 
-                // Save the file
-                var FullPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", path);
-                using (var stream = new FileStream(FullPath, FileMode.Create))
-                {
-                    file.CopyTo(stream);
-                }
-
-                ViewData["ImageUrl"] = filename;
-                name = filename;
-                ViewBag.ImgUploaded = true;
-            }
-            else
-            {
-                ViewBag.ImgUploaded = false;
-            }
-
-            return RedirectToAction("UserAccountMethod", new { Sname = name });
-        }
-        public IActionResult SaveChanges(Account account)
-        {
-            using(var context = new AppDbContext(Helper._configurationPub))
-            {
-                context.Accounts.Update(account);
-                context.SaveChanges();
                 return RedirectToAction("UserAccountMethod");
-            }
-        }
-
-        public IActionResult UserAccountMethod(string Sname)
-        {
-            ViewBag.ImgUploaded = false;
-            ViewData["ImageUrl"] = Sname;
-            string name = HttpContext.Request.Cookies["UserName"].ToString();
-            using(var context = new AppDbContext(Helper._configurationPub))
-            {
-                Account UserAccount =context.Accounts.FirstOrDefault(x => x.UserName == name);
-           
-            if (UserAccount == null)
-            {
-                return NotFound();
-            }
-
-            return View(UserAccount);
             }
         }
         public IActionResult SignupForm(Account account)
