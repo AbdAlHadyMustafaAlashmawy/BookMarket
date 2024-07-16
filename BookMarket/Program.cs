@@ -5,6 +5,8 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using BookMarket.Models.Helpers;
+using BookMarket.Repos.Repo_Interfaces;
+using BookMarket.Repos;
 
 namespace BookMarket
 {
@@ -22,11 +24,14 @@ namespace BookMarket
 
             // Add services to the container.
             builder.Services.AddControllersWithViews().AddRazorRuntimeCompilation();
-
+            builder.Services.AddDbContext<AppDbContext>();
+            builder.Services.AddScoped<IBooksReposatory, BooksRepository>();
+            builder.Services.AddScoped<IWritersRepository, WritersRepository>();
+            builder.Services.AddScoped<IProducersRepository, ProducersRepository>();
+            builder.Services.AddScoped<IBagsReposatory, BagsReposatory>();
             // Register the AppDbContext with dependency injection.
-            builder.Services.AddDbContext<AppDbContext>(options =>
-                options.UseSqlServer(builder.Configuration.GetConnectionString("Conn")));
-
+            //builder.Services.AddDbContext<AppDbContext>(options =>
+            //    options.UseSqlServer(builder.Configuration.GetConnectionString("Conn")));
             // Build the application.
             var app = builder.Build();
 

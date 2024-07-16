@@ -1,18 +1,20 @@
 ﻿using BookMarket.Models;
 using BookMarket.Models.Helpers;
+using BookMarket.Repos.Repo_Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace BookMarket.Repos
 {
-    public class BooksRepository
+    public class BooksRepository: IBooksReposatory
     {
         private readonly AppDbContext context;
 
-        public BooksRepository()
+        public BooksRepository(AppDbContext _context)
         {
-            context = new AppDbContext(Helper._configurationPub);
+            context = _context;
         }
+
         public List<Book> GetWhole()
         {
             return context.Books.Include(x => x.Writer).Include(x => x.Producer).ToList();
@@ -43,6 +45,12 @@ namespace BookMarket.Repos
         {
             context.Books.Update(book);
             context.SaveChanges();
+        }
+
+        public int GetWriterId(int id)
+        {
+           var writer =  context.Writers.FirstOrDefault(x => x.Id == (context.Books.FirstOrDefault(x => x.Id == id).WriterId));
+            return writer.Id;
         }
     }
 }

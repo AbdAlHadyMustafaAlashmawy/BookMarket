@@ -10,11 +10,14 @@ namespace BookMarket
         public class AppDbContext : DbContext
         {
         private IConfiguration _Configuration;
-
         public AppDbContext(IConfiguration configuration)
         {
             _Configuration = configuration;
+        }
 
+        public AppDbContext(IConfiguration configuration,DbContextOptions options):base(options)
+        {
+            _Configuration = configuration;
         }
         public DbSet<Bag> Bag { get; set; }
         public DbSet<Writer> Writers { get; set; }

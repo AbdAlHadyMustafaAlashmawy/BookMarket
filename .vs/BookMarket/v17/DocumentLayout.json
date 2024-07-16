@@ -3,40 +3,92 @@
   "WorkspaceRootPath": "C:\\Users\\bedo\\source\\repos\\BookMarket\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7023DF65-C749-40AF-8FE6-D15B60CBA3AF}|BookMarket\\BookMarket.csproj|c:\\users\\bedo\\source\\repos\\bookmarket\\bookmarket\\controllers\\producerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7023DF65-C749-40AF-8FE6-D15B60CBA3AF}|BookMarket\\BookMarket.csproj|solutionrelative:bookmarket\\controllers\\producerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7023DF65-C749-40AF-8FE6-D15B60CBA3AF}|BookMarket\\BookMarket.csproj|C:\\Users\\bedo\\source\\repos\\BookMarket\\bookmarket\\controllers\\bookscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7023DF65-C749-40AF-8FE6-D15B60CBA3AF}|BookMarket\\BookMarket.csproj|solutionrelative:bookmarket\\controllers\\bookscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7023DF65-C749-40AF-8FE6-D15B60CBA3AF}|BookMarket\\BookMarket.csproj|C:\\Users\\bedo\\source\\repos\\BookMarket\\bookmarket\\repos\\producersrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7023DF65-C749-40AF-8FE6-D15B60CBA3AF}|BookMarket\\BookMarket.csproj|solutionrelative:bookmarket\\repos\\producersrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7023DF65-C749-40AF-8FE6-D15B60CBA3AF}|BookMarket\\BookMarket.csproj|C:\\Users\\bedo\\source\\repos\\BookMarket\\bookmarket\\controllers\\bagcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7023DF65-C749-40AF-8FE6-D15B60CBA3AF}|BookMarket\\BookMarket.csproj|solutionrelative:bookmarket\\controllers\\bagcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7023DF65-C749-40AF-8FE6-D15B60CBA3AF}|BookMarket\\BookMarket.csproj|C:\\Users\\bedo\\source\\repos\\BookMarket\\bookmarket\\repos\\booksrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7023DF65-C749-40AF-8FE6-D15B60CBA3AF}|BookMarket\\BookMarket.csproj|solutionrelative:bookmarket\\repos\\booksrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7023DF65-C749-40AF-8FE6-D15B60CBA3AF}|BookMarket\\BookMarket.csproj|C:\\Users\\bedo\\source\\repos\\BookMarket\\bookmarket\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7023DF65-C749-40AF-8FE6-D15B60CBA3AF}|BookMarket\\BookMarket.csproj|solutionrelative:bookmarket\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7023DF65-C749-40AF-8FE6-D15B60CBA3AF}|BookMarket\\BookMarket.csproj|C:\\Users\\bedo\\source\\repos\\BookMarket\\bookmarket\\repos\\writersrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7023DF65-C749-40AF-8FE6-D15B60CBA3AF}|BookMarket\\BookMarket.csproj|solutionrelative:bookmarket\\repos\\writersrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7023DF65-C749-40AF-8FE6-D15B60CBA3AF}|BookMarket\\BookMarket.csproj|C:\\Users\\bedo\\source\\repos\\BookMarket\\bookmarket\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7023DF65-C749-40AF-8FE6-D15B60CBA3AF}|BookMarket\\BookMarket.csproj|solutionrelative:bookmarket\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7023DF65-C749-40AF-8FE6-D15B60CBA3AF}|BookMarket\\BookMarket.csproj|c:\\users\\bedo\\source\\repos\\bookmarket\\bookmarket\\repos\\genaricreposatory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7023DF65-C749-40AF-8FE6-D15B60CBA3AF}|BookMarket\\BookMarket.csproj|solutionrelative:bookmarket\\repos\\genaricreposatory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7023DF65-C749-40AF-8FE6-D15B60CBA3AF}|BookMarket\\BookMarket.csproj|C:\\Users\\bedo\\source\\repos\\BookMarket\\bookmarket\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7023DF65-C749-40AF-8FE6-D15B60CBA3AF}|BookMarket\\BookMarket.csproj|solutionrelative:bookmarket\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7023DF65-C749-40AF-8FE6-D15B60CBA3AF}|BookMarket\\BookMarket.csproj|C:\\Users\\bedo\\source\\repos\\BookMarket\\bookmarket\\models\\myvalidationattributes\\uniqueaccnameattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7023DF65-C749-40AF-8FE6-D15B60CBA3AF}|BookMarket\\BookMarket.csproj|solutionrelative:bookmarket\\models\\myvalidationattributes\\uniqueaccnameattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7023DF65-C749-40AF-8FE6-D15B60CBA3AF}|BookMarket\\BookMarket.csproj|C:\\Users\\bedo\\source\\repos\\BookMarket\\bookmarket\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{7023DF65-C749-40AF-8FE6-D15B60CBA3AF}|BookMarket\\BookMarket.csproj|solutionrelative:bookmarket\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7023DF65-C749-40AF-8FE6-D15B60CBA3AF}|BookMarket\\BookMarket.csproj|C:\\Users\\bedo\\source\\repos\\BookMarket\\bookmarket\\repos\\producersrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7023DF65-C749-40AF-8FE6-D15B60CBA3AF}|BookMarket\\BookMarket.csproj|solutionrelative:bookmarket\\repos\\producersrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7023DF65-C749-40AF-8FE6-D15B60CBA3AF}|BookMarket\\BookMarket.csproj|C:\\Users\\bedo\\source\\repos\\BookMarket\\bookmarket\\repos\\bagsreposatory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7023DF65-C749-40AF-8FE6-D15B60CBA3AF}|BookMarket\\BookMarket.csproj|solutionrelative:bookmarket\\repos\\bagsreposatory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7023DF65-C749-40AF-8FE6-D15B60CBA3AF}|BookMarket\\BookMarket.csproj|C:\\Users\\bedo\\source\\repos\\BookMarket\\bookmarket\\repos\\booksrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7023DF65-C749-40AF-8FE6-D15B60CBA3AF}|BookMarket\\BookMarket.csproj|solutionrelative:bookmarket\\repos\\booksrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7023DF65-C749-40AF-8FE6-D15B60CBA3AF}|BookMarket\\BookMarket.csproj|C:\\Users\\bedo\\source\\repos\\BookMarket\\bookmarket\\controllers\\bookscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7023DF65-C749-40AF-8FE6-D15B60CBA3AF}|BookMarket\\BookMarket.csproj|solutionrelative:bookmarket\\controllers\\bookscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7023DF65-C749-40AF-8FE6-D15B60CBA3AF}|BookMarket\\BookMarket.csproj|C:\\Users\\bedo\\source\\repos\\BookMarket\\bookmarket\\controllers\\producerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7023DF65-C749-40AF-8FE6-D15B60CBA3AF}|BookMarket\\BookMarket.csproj|solutionrelative:bookmarket\\controllers\\producerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7023DF65-C749-40AF-8FE6-D15B60CBA3AF}|BookMarket\\BookMarket.csproj|c:\\users\\bedo\\source\\repos\\bookmarket\\bookmarket\\repos\\repo_interfaces\\iproducersrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7023DF65-C749-40AF-8FE6-D15B60CBA3AF}|BookMarket\\BookMarket.csproj|solutionrelative:bookmarket\\repos\\repo_interfaces\\iproducersrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7023DF65-C749-40AF-8FE6-D15B60CBA3AF}|BookMarket\\BookMarket.csproj|c:\\users\\bedo\\source\\repos\\bookmarket\\bookmarket\\repos\\repo_interfaces\\iwritersrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7023DF65-C749-40AF-8FE6-D15B60CBA3AF}|BookMarket\\BookMarket.csproj|solutionrelative:bookmarket\\repos\\repo_interfaces\\iwritersrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7023DF65-C749-40AF-8FE6-D15B60CBA3AF}|BookMarket\\BookMarket.csproj|C:\\Users\\bedo\\source\\repos\\BookMarket\\bookmarket\\repos\\repo_interfaces\\ibooksreposatory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7023DF65-C749-40AF-8FE6-D15B60CBA3AF}|BookMarket\\BookMarket.csproj|solutionrelative:bookmarket\\repos\\repo_interfaces\\ibooksreposatory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7023DF65-C749-40AF-8FE6-D15B60CBA3AF}|BookMarket\\BookMarket.csproj|c:\\users\\bedo\\source\\repos\\bookmarket\\bookmarket\\repos\\repo_interfaces\\ibagsreposatory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7023DF65-C749-40AF-8FE6-D15B60CBA3AF}|BookMarket\\BookMarket.csproj|solutionrelative:bookmarket\\repos\\repo_interfaces\\ibagsreposatory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7023DF65-C749-40AF-8FE6-D15B60CBA3AF}|BookMarket\\BookMarket.csproj|C:\\Users\\bedo\\source\\repos\\BookMarket\\bookmarket\\views\\bag\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7023DF65-C749-40AF-8FE6-D15B60CBA3AF}|BookMarket\\BookMarket.csproj|solutionrelative:bookmarket\\views\\bag\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7023DF65-C749-40AF-8FE6-D15B60CBA3AF}|BookMarket\\BookMarket.csproj|C:\\Users\\bedo\\source\\repos\\BookMarket\\bookmarket\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7023DF65-C749-40AF-8FE6-D15B60CBA3AF}|BookMarket\\BookMarket.csproj|solutionrelative:bookmarket\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7023DF65-C749-40AF-8FE6-D15B60CBA3AF}|BookMarket\\BookMarket.csproj|C:\\Users\\bedo\\source\\repos\\BookMarket\\bookmarket\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7023DF65-C749-40AF-8FE6-D15B60CBA3AF}|BookMarket\\BookMarket.csproj|solutionrelative:bookmarket\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7023DF65-C749-40AF-8FE6-D15B60CBA3AF}|BookMarket\\BookMarket.csproj|C:\\Users\\bedo\\source\\repos\\BookMarket\\bookmarket\\models\\bag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7023DF65-C749-40AF-8FE6-D15B60CBA3AF}|BookMarket\\BookMarket.csproj|solutionrelative:bookmarket\\models\\bag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7023DF65-C749-40AF-8FE6-D15B60CBA3AF}|BookMarket\\BookMarket.csproj|C:\\Users\\bedo\\source\\repos\\BookMarket\\bookmarket\\models\\account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7023DF65-C749-40AF-8FE6-D15B60CBA3AF}|BookMarket\\BookMarket.csproj|solutionrelative:bookmarket\\models\\account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7023DF65-C749-40AF-8FE6-D15B60CBA3AF}|BookMarket\\BookMarket.csproj|C:\\Users\\bedo\\source\\repos\\BookMarket\\bookmarket\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7023DF65-C749-40AF-8FE6-D15B60CBA3AF}|BookMarket\\BookMarket.csproj|solutionrelative:bookmarket\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7023DF65-C749-40AF-8FE6-D15B60CBA3AF}|BookMarket\\BookMarket.csproj|C:\\Users\\bedo\\source\\repos\\BookMarket\\bookmarket\\controllers\\bagcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7023DF65-C749-40AF-8FE6-D15B60CBA3AF}|BookMarket\\BookMarket.csproj|solutionrelative:bookmarket\\controllers\\bagcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7023DF65-C749-40AF-8FE6-D15B60CBA3AF}|BookMarket\\BookMarket.csproj|C:\\Users\\bedo\\source\\repos\\BookMarket\\bookmarket\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7023DF65-C749-40AF-8FE6-D15B60CBA3AF}|BookMarket\\BookMarket.csproj|solutionrelative:bookmarket\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Migrations\\20240401235919_Second.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -79,24 +131,8 @@
       "RelativeMoniker": "D:0:0:{7023DF65-C749-40AF-8FE6-D15B60CBA3AF}|BookMarket\\BookMarket.csproj|solutionrelative:bookmarket\\views\\account\\useraccountmethod.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7023DF65-C749-40AF-8FE6-D15B60CBA3AF}|BookMarket\\BookMarket.csproj|C:\\Users\\bedo\\source\\repos\\BookMarket\\bookmarket\\models\\account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7023DF65-C749-40AF-8FE6-D15B60CBA3AF}|BookMarket\\BookMarket.csproj|solutionrelative:bookmarket\\models\\account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7023DF65-C749-40AF-8FE6-D15B60CBA3AF}|BookMarket\\BookMarket.csproj|C:\\Users\\bedo\\source\\repos\\BookMarket\\bookmarket\\models\\bag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7023DF65-C749-40AF-8FE6-D15B60CBA3AF}|BookMarket\\BookMarket.csproj|solutionrelative:bookmarket\\models\\bag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{7023DF65-C749-40AF-8FE6-D15B60CBA3AF}|BookMarket\\BookMarket.csproj|C:\\Users\\bedo\\source\\repos\\BookMarket\\bookmarket\\models\\writer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7023DF65-C749-40AF-8FE6-D15B60CBA3AF}|BookMarket\\BookMarket.csproj|solutionrelative:bookmarket\\models\\writer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7023DF65-C749-40AF-8FE6-D15B60CBA3AF}|BookMarket\\BookMarket.csproj|C:\\Users\\bedo\\source\\repos\\BookMarket\\bookmarket\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{7023DF65-C749-40AF-8FE6-D15B60CBA3AF}|BookMarket\\BookMarket.csproj|solutionrelative:bookmarket\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7023DF65-C749-40AF-8FE6-D15B60CBA3AF}|BookMarket\\BookMarket.csproj|C:\\Users\\bedo\\source\\repos\\BookMarket\\bookmarket\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7023DF65-C749-40AF-8FE6-D15B60CBA3AF}|BookMarket\\BookMarket.csproj|solutionrelative:bookmarket\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7023DF65-C749-40AF-8FE6-D15B60CBA3AF}|BookMarket\\BookMarket.csproj|C:\\Users\\bedo\\source\\repos\\BookMarket\\bookmarket\\views\\books\\notfound.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -105,10 +141,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{7023DF65-C749-40AF-8FE6-D15B60CBA3AF}|BookMarket\\BookMarket.csproj|C:\\Users\\bedo\\source\\repos\\BookMarket\\bookmarket\\views\\books\\view.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{7023DF65-C749-40AF-8FE6-D15B60CBA3AF}|BookMarket\\BookMarket.csproj|solutionrelative:bookmarket\\views\\books\\view.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7023DF65-C749-40AF-8FE6-D15B60CBA3AF}|BookMarket\\BookMarket.csproj|C:\\Users\\bedo\\source\\repos\\BookMarket\\bookmarket\\views\\bag\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{7023DF65-C749-40AF-8FE6-D15B60CBA3AF}|BookMarket\\BookMarket.csproj|solutionrelative:bookmarket\\views\\bag\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7023DF65-C749-40AF-8FE6-D15B60CBA3AF}|BookMarket\\BookMarket.csproj|C:\\Users\\bedo\\source\\repos\\BookMarket\\bookmarket\\models\\helpers\\helper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -187,10 +219,6 @@
       "RelativeMoniker": "D:0:0:{7023DF65-C749-40AF-8FE6-D15B60CBA3AF}|BookMarket\\BookMarket.csproj|solutionrelative:bookmarket\\models\\myvalidationattributes\\pastbirthdateattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7023DF65-C749-40AF-8FE6-D15B60CBA3AF}|BookMarket\\BookMarket.csproj|C:\\Users\\bedo\\source\\repos\\BookMarket\\bookmarket\\models\\myvalidationattributes\\uniqueaccnameattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7023DF65-C749-40AF-8FE6-D15B60CBA3AF}|BookMarket\\BookMarket.csproj|solutionrelative:bookmarket\\models\\myvalidationattributes\\uniqueaccnameattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{7023DF65-C749-40AF-8FE6-D15B60CBA3AF}|BookMarket\\BookMarket.csproj|C:\\Users\\bedo\\source\\repos\\BookMarket\\bookmarket\\wwwroot\\images\\noun-book-bag-3249030.svg||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{7023DF65-C749-40AF-8FE6-D15B60CBA3AF}|BookMarket\\BookMarket.csproj|solutionrelative:bookmarket\\wwwroot\\images\\noun-book-bag-3249030.svg||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
@@ -237,10 +265,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{7023DF65-C749-40AF-8FE6-D15B60CBA3AF}|BookMarket\\BookMarket.csproj|C:\\Users\\bedo\\source\\repos\\BookMarket\\bookmarket\\views\\writers\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{7023DF65-C749-40AF-8FE6-D15B60CBA3AF}|BookMarket\\BookMarket.csproj|solutionrelative:bookmarket\\views\\writers\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7023DF65-C749-40AF-8FE6-D15B60CBA3AF}|BookMarket\\BookMarket.csproj|C:\\Users\\bedo\\source\\repos\\BookMarket\\bookmarket\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7023DF65-C749-40AF-8FE6-D15B60CBA3AF}|BookMarket\\BookMarket.csproj|solutionrelative:bookmarket\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7023DF65-C749-40AF-8FE6-D15B60CBA3AF}|BookMarket\\BookMarket.csproj|C:\\Users\\bedo\\source\\repos\\BookMarket\\bookmarket\\views\\writers\\createredirectorform.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -318,216 +342,255 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "BooksRepository.cs",
-              "DocumentMoniker": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Repos\\BooksRepository.cs",
-              "RelativeDocumentMoniker": "BookMarket\\Repos\\BooksRepository.cs",
-              "ToolTip": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Repos\\BooksRepository.cs",
-              "RelativeToolTip": "BookMarket\\Repos\\BooksRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
+              "DocumentIndex": 6,
+              "Title": "ProducersRepository.cs",
+              "DocumentMoniker": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Repos\\ProducersRepository.cs",
+              "RelativeDocumentMoniker": "BookMarket\\Repos\\ProducersRepository.cs",
+              "ToolTip": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Repos\\ProducersRepository.cs",
+              "RelativeToolTip": "BookMarket\\Repos\\ProducersRepository.cs",
+              "ViewState": "AQIAAB8AAAAAAAAAAAAcwAgAAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-30T06:03:59.239Z"
+              "WhenOpened": "2024-06-30T06:28:09.563Z",
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "BooksController.cs",
-              "DocumentMoniker": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Controllers\\BooksController.cs",
-              "RelativeDocumentMoniker": "BookMarket\\Controllers\\BooksController.cs",
-              "ToolTip": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Controllers\\BooksController.cs",
-              "RelativeToolTip": "BookMarket\\Controllers\\BooksController.cs",
-              "ViewState": "AQIAAGEAAAAAAAAAAAAYwBMAAAAfAAAA",
+              "DocumentIndex": 3,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "BookMarket\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\AppDbContext.cs",
+              "RelativeToolTip": "BookMarket\\AppDbContext.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAgwB8AAAAuAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-03T04:38:53.691Z"
+              "WhenOpened": "2024-04-01T11:15:20.117Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UniqueAccNameAttribute.cs",
+              "DocumentMoniker": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Models\\MyValidationAttributes\\UniqueAccNameAttribute.cs",
+              "RelativeDocumentMoniker": "BookMarket\\Models\\MyValidationAttributes\\UniqueAccNameAttribute.cs",
+              "ToolTip": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Models\\MyValidationAttributes\\UniqueAccNameAttribute.cs",
+              "RelativeToolTip": "BookMarket\\Models\\MyValidationAttributes\\UniqueAccNameAttribute.cs",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAawBAAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-14T09:56:47.999Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Program.cs",
+              "RelativeDocumentMoniker": "BookMarket\\Program.cs",
+              "ToolTip": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Program.cs",
+              "RelativeToolTip": "BookMarket\\Program.cs",
+              "ViewState": "AQIAABgAAAAAAAAAAAAQwBMAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-01T12:15:27.966Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\appsettings.json",
+              "RelativeDocumentMoniker": "BookMarket\\appsettings.json",
+              "ToolTip": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\appsettings.json",
+              "RelativeToolTip": "BookMarket\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-04-01T11:20:08.558Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "GenaricReposatory.cs",
+              "DocumentMoniker": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Repos\\GenaricReposatory.cs",
+              "RelativeDocumentMoniker": "BookMarket\\Repos\\GenaricReposatory.cs",
+              "ToolTip": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Repos\\GenaricReposatory.cs",
+              "RelativeToolTip": "BookMarket\\Repos\\GenaricReposatory.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-15T16:52:20.056Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "WritersRepository.cs",
+              "DocumentMoniker": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Repos\\WritersRepository.cs",
+              "RelativeDocumentMoniker": "BookMarket\\Repos\\WritersRepository.cs",
+              "ToolTip": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Repos\\WritersRepository.cs",
+              "RelativeToolTip": "BookMarket\\Repos\\WritersRepository.cs",
+              "ViewState": "AQIAAB0AAAAAAAAAAAAIwAwAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-30T06:31:24.104Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "IBooksReposatory.cs",
+              "DocumentMoniker": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Repos\\Repo_Interfaces\\IBooksReposatory.cs",
+              "RelativeDocumentMoniker": "BookMarket\\Repos\\Repo_Interfaces\\IBooksReposatory.cs",
+              "ToolTip": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Repos\\Repo_Interfaces\\IBooksReposatory.cs",
+              "RelativeToolTip": "BookMarket\\Repos\\Repo_Interfaces\\IBooksReposatory.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAgAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-15T17:59:27.243Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "IWritersRepository.cs",
+              "DocumentMoniker": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Repos\\Repo_Interfaces\\IWritersRepository.cs",
+              "RelativeDocumentMoniker": "BookMarket\\Repos\\Repo_Interfaces\\IWritersRepository.cs",
+              "ToolTip": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Repos\\Repo_Interfaces\\IWritersRepository.cs",
+              "RelativeToolTip": "BookMarket\\Repos\\Repo_Interfaces\\IWritersRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAA5AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-15T23:46:33.65Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "IProducersRepository.cs",
+              "DocumentMoniker": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Repos\\Repo_Interfaces\\IProducersRepository.cs",
+              "RelativeDocumentMoniker": "BookMarket\\Repos\\Repo_Interfaces\\IProducersRepository.cs",
+              "ToolTip": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Repos\\Repo_Interfaces\\IProducersRepository.cs",
+              "RelativeToolTip": "BookMarket\\Repos\\Repo_Interfaces\\IProducersRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-15T23:42:00.511Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "ProducersController.cs",
               "DocumentMoniker": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Controllers\\ProducersController.cs",
               "RelativeDocumentMoniker": "BookMarket\\Controllers\\ProducersController.cs",
               "ToolTip": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Controllers\\ProducersController.cs",
               "RelativeToolTip": "BookMarket\\Controllers\\ProducersController.cs",
-              "ViewState": "AQIAAA8AAACgmZmZmZklwA4AAAAiAAAA",
+              "ViewState": "AQIAAAYAAAAAAAAAAAD4vxIAAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-03T04:40:07.5Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ProducersRepository.cs",
-              "DocumentMoniker": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Repos\\ProducersRepository.cs",
-              "RelativeDocumentMoniker": "BookMarket\\Repos\\ProducersRepository.cs",
-              "ToolTip": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Repos\\ProducersRepository.cs",
-              "RelativeToolTip": "BookMarket\\Repos\\ProducersRepository.cs",
-              "ViewState": "AQIAABYAAAAAAAAAAAAswCMAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-30T06:28:09.563Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "WritersRepository.cs",
-              "DocumentMoniker": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Repos\\WritersRepository.cs",
-              "RelativeDocumentMoniker": "BookMarket\\Repos\\WritersRepository.cs",
-              "ToolTip": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Repos\\WritersRepository.cs",
-              "RelativeToolTip": "BookMarket\\Repos\\WritersRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-30T06:31:24.104Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "BookMarket\\Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "BookMarket\\Controllers\\HomeController.cs",
-              "ViewState": "AQIAABAAAAAAAAAAAAAgwBUAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-01T22:07:02.048Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "BagController.cs",
-              "DocumentMoniker": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Controllers\\BagController.cs",
-              "RelativeDocumentMoniker": "BookMarket\\Controllers\\BagController.cs",
-              "ToolTip": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Controllers\\BagController.cs",
-              "RelativeToolTip": "BookMarket\\Controllers\\BagController.cs",
-              "ViewState": "AQIAADsAAAAAAAAAAAAwwHAAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-15T14:59:19.557Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 7,
+              "Title": "BagsReposatory.cs",
+              "DocumentMoniker": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Repos\\BagsReposatory.cs",
+              "RelativeDocumentMoniker": "BookMarket\\Repos\\BagsReposatory.cs",
+              "ToolTip": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Repos\\BagsReposatory.cs",
+              "RelativeToolTip": "BookMarket\\Repos\\BagsReposatory.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-15T16:59:15.267Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "BooksController.cs",
+              "DocumentMoniker": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Controllers\\BooksController.cs",
+              "RelativeDocumentMoniker": "BookMarket\\Controllers\\BooksController.cs",
+              "ToolTip": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Controllers\\BooksController.cs",
+              "RelativeToolTip": "BookMarket\\Controllers\\BooksController.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAAjwBkAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-03T04:38:53.691Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "BooksRepository.cs",
+              "DocumentMoniker": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Repos\\BooksRepository.cs",
+              "RelativeDocumentMoniker": "BookMarket\\Repos\\BooksRepository.cs",
+              "ToolTip": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Repos\\BooksRepository.cs",
+              "RelativeToolTip": "BookMarket\\Repos\\BooksRepository.cs",
+              "ViewState": "AQIAACEAAAAAAAAAAAA4wA4AAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-30T06:03:59.239Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "IBagsReposatory.cs",
+              "DocumentMoniker": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Repos\\Repo_Interfaces\\IBagsReposatory.cs",
+              "RelativeDocumentMoniker": "BookMarket\\Repos\\Repo_Interfaces\\IBagsReposatory.cs",
+              "ToolTip": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Repos\\Repo_Interfaces\\IBagsReposatory.cs",
+              "RelativeToolTip": "BookMarket\\Repos\\Repo_Interfaces\\IBagsReposatory.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-15T23:52:18.757Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "ErrorViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Models\\ErrorViewModel.cs",
+              "RelativeDocumentMoniker": "BookMarket\\Models\\ErrorViewModel.cs",
+              "ToolTip": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Models\\ErrorViewModel.cs",
+              "RelativeToolTip": "BookMarket\\Models\\ErrorViewModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-01T10:46:34.051Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Account.cs",
+              "DocumentMoniker": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Models\\Account.cs",
+              "RelativeDocumentMoniker": "BookMarket\\Models\\Account.cs",
+              "ToolTip": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Models\\Account.cs",
+              "RelativeToolTip": "BookMarket\\Models\\Account.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAA1wCMAAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-07T06:17:35.111Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Views\\Bag\\Index.cshtml",
+              "RelativeDocumentMoniker": "BookMarket\\Views\\Bag\\Index.cshtml",
+              "ToolTip": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Views\\Bag\\Index.cshtml",
+              "RelativeToolTip": "BookMarket\\Views\\Bag\\Index.cshtml",
+              "ViewState": "AQIAAEIAAABAZmZmZmYkwE8AAABDAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-15T15:03:05.785Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
               "Title": "AccountController.cs",
               "DocumentMoniker": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Controllers\\AccountController.cs",
               "RelativeDocumentMoniker": "BookMarket\\Controllers\\AccountController.cs",
               "ToolTip": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Controllers\\AccountController.cs",
               "RelativeToolTip": "BookMarket\\Controllers\\AccountController.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAAAoAAAAFAAAA",
+              "ViewState": "AQIAADEAAAAAAAAAAAAowDUAAAAyAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-07T06:16:28.681Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Program.cs",
-              "RelativeDocumentMoniker": "BookMarket\\Program.cs",
-              "ToolTip": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Program.cs",
-              "RelativeToolTip": "BookMarket\\Program.cs",
-              "ViewState": "AQIAABEAAACAmZmZmZkdwC0AAAAtAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-01T12:15:27.966Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 17,
-              "Title": "Error.cshtml",
-              "DocumentMoniker": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Views\\Shared\\Error.cshtml",
-              "RelativeDocumentMoniker": "BookMarket\\Views\\Shared\\Error.cshtml",
-              "ToolTip": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Views\\Shared\\Error.cshtml",
-              "RelativeToolTip": "BookMarket\\Views\\Shared\\Error.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-03T04:13:52.932Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "_ValidationScriptsPartial.cshtml",
-              "DocumentMoniker": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
-              "RelativeDocumentMoniker": "BookMarket\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
-              "ToolTip": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
-              "RelativeToolTip": "BookMarket\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-03T04:13:54.074Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "BookMarket\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "BookMarket\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AQIAADYAAAAAAAAAAAAIwEsAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-02T05:23:40.058Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "TestController.cs",
-              "DocumentMoniker": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Controllers\\TestController.cs",
-              "RelativeDocumentMoniker": "BookMarket\\Controllers\\TestController.cs",
-              "ToolTip": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Controllers\\TestController.cs",
-              "RelativeToolTip": "BookMarket\\Controllers\\TestController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACUAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-08T04:00:25.713Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "_ViewImports.cshtml",
-              "DocumentMoniker": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Views\\_ViewImports.cshtml",
-              "RelativeDocumentMoniker": "BookMarket\\Views\\_ViewImports.cshtml",
-              "ToolTip": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Views\\_ViewImports.cshtml",
-              "RelativeToolTip": "BookMarket\\Views\\_ViewImports.cshtml",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-02T05:08:23.496Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "_ViewStart.cshtml",
-              "DocumentMoniker": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Views\\_ViewStart.cshtml",
-              "RelativeDocumentMoniker": "BookMarket\\Views\\_ViewStart.cshtml",
-              "ToolTip": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Views\\_ViewStart.cshtml",
-              "RelativeToolTip": "BookMarket\\Views\\_ViewStart.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAASAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-02T05:08:25.289Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "UserAccountMethod.cshtml",
-              "DocumentMoniker": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Views\\Account\\UserAccountMethod.cshtml",
-              "RelativeDocumentMoniker": "BookMarket\\Views\\Account\\UserAccountMethod.cshtml",
-              "ToolTip": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Views\\Account\\UserAccountMethod.cshtml",
-              "RelativeToolTip": "BookMarket\\Views\\Account\\UserAccountMethod.cshtml",
-              "ViewState": "AQIAAIcAAAAAAAAAAAAhwFYAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-25T09:08:54.071Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "_NavPartial.cshtml",
-              "DocumentMoniker": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Views\\Shared\\_NavPartial.cshtml",
-              "RelativeDocumentMoniker": "BookMarket\\Views\\Shared\\_NavPartial.cshtml",
-              "ToolTip": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Views\\Shared\\_NavPartial.cshtml",
-              "RelativeToolTip": "BookMarket\\Views\\Shared\\_NavPartial.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAARAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-19T15:01:19.681Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
               "Title": "Bag.cs",
               "DocumentMoniker": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Models\\Bag.cs",
               "RelativeDocumentMoniker": "BookMarket\\Models\\Bag.cs",
@@ -540,6 +603,126 @@
             {
               "$type": "Document",
               "DocumentIndex": 21,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "BookMarket\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "BookMarket\\Controllers\\HomeController.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAgwBUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-01T22:07:02.048Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "BagController.cs",
+              "DocumentMoniker": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Controllers\\BagController.cs",
+              "RelativeDocumentMoniker": "BookMarket\\Controllers\\BagController.cs",
+              "ToolTip": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Controllers\\BagController.cs",
+              "RelativeToolTip": "BookMarket\\Controllers\\BagController.cs",
+              "ViewState": "AQIAADsAAAAAAAAAAAAwwHAAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-15T14:59:19.557Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "Error.cshtml",
+              "DocumentMoniker": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Views\\Shared\\Error.cshtml",
+              "RelativeDocumentMoniker": "BookMarket\\Views\\Shared\\Error.cshtml",
+              "ToolTip": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Views\\Shared\\Error.cshtml",
+              "RelativeToolTip": "BookMarket\\Views\\Shared\\Error.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-03T04:13:52.932Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "_ValidationScriptsPartial.cshtml",
+              "DocumentMoniker": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "RelativeDocumentMoniker": "BookMarket\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ToolTip": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "RelativeToolTip": "BookMarket\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-03T04:13:54.074Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "BookMarket\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "BookMarket\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAADYAAAAAAAAAAAAIwEsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-02T05:23:40.058Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "TestController.cs",
+              "DocumentMoniker": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Controllers\\TestController.cs",
+              "RelativeDocumentMoniker": "BookMarket\\Controllers\\TestController.cs",
+              "ToolTip": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Controllers\\TestController.cs",
+              "RelativeToolTip": "BookMarket\\Controllers\\TestController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACUAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-08T04:00:25.713Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Views\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "BookMarket\\Views\\_ViewImports.cshtml",
+              "ToolTip": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Views\\_ViewImports.cshtml",
+              "RelativeToolTip": "BookMarket\\Views\\_ViewImports.cshtml",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-02T05:08:23.496Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "_ViewStart.cshtml",
+              "DocumentMoniker": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Views\\_ViewStart.cshtml",
+              "RelativeDocumentMoniker": "BookMarket\\Views\\_ViewStart.cshtml",
+              "ToolTip": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Views\\_ViewStart.cshtml",
+              "RelativeToolTip": "BookMarket\\Views\\_ViewStart.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-02T05:08:25.289Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "UserAccountMethod.cshtml",
+              "DocumentMoniker": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Views\\Account\\UserAccountMethod.cshtml",
+              "RelativeDocumentMoniker": "BookMarket\\Views\\Account\\UserAccountMethod.cshtml",
+              "ToolTip": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Views\\Account\\UserAccountMethod.cshtml",
+              "RelativeToolTip": "BookMarket\\Views\\Account\\UserAccountMethod.cshtml",
+              "ViewState": "AQIAAIcAAAAAAAAAAAAhwFYAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-25T09:08:54.071Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "_NavPartial.cshtml",
+              "DocumentMoniker": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Views\\Shared\\_NavPartial.cshtml",
+              "RelativeDocumentMoniker": "BookMarket\\Views\\Shared\\_NavPartial.cshtml",
+              "ToolTip": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Views\\Shared\\_NavPartial.cshtml",
+              "RelativeToolTip": "BookMarket\\Views\\Shared\\_NavPartial.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-19T15:01:19.681Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
               "Title": "Writer.cs",
               "DocumentMoniker": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Models\\Writer.cs",
               "RelativeDocumentMoniker": "BookMarket\\Models\\Writer.cs",
@@ -551,43 +734,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\appsettings.json",
-              "RelativeDocumentMoniker": "BookMarket\\appsettings.json",
-              "ToolTip": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\appsettings.json",
-              "RelativeToolTip": "BookMarket\\appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAApAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-04-01T11:20:08.558Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "Account.cs",
-              "DocumentMoniker": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Models\\Account.cs",
-              "RelativeDocumentMoniker": "BookMarket\\Models\\Account.cs",
-              "ToolTip": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Models\\Account.cs",
-              "RelativeToolTip": "BookMarket\\Models\\Account.cs",
-              "ViewState": "AQIAAAEAAAAAAAAAAAAQwCMAAAATAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-07T06:17:35.111Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "AppDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\AppDbContext.cs",
-              "RelativeDocumentMoniker": "BookMarket\\AppDbContext.cs",
-              "ToolTip": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\AppDbContext.cs",
-              "RelativeToolTip": "BookMarket\\AppDbContext.cs",
-              "ViewState": "AQIAABYAAAAAAAAAAAA0wBEAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-01T11:15:20.117Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 33,
               "Title": "NotFound.cshtml",
               "DocumentMoniker": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Views\\Books\\NotFound.cshtml",
               "RelativeDocumentMoniker": "BookMarket\\Views\\Books\\NotFound.cshtml",
@@ -599,7 +746,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 34,
               "Title": "View.cshtml",
               "DocumentMoniker": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Views\\Books\\View.cshtml",
               "RelativeDocumentMoniker": "BookMarket\\Views\\Books\\View.cshtml",
@@ -611,7 +758,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 35,
               "Title": "Helper.cs",
               "DocumentMoniker": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Models\\Helpers\\Helper.cs",
               "RelativeDocumentMoniker": "BookMarket\\Models\\Helpers\\Helper.cs",
@@ -623,7 +770,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 36,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Views\\Books\\Index.cshtml",
               "RelativeDocumentMoniker": "BookMarket\\Views\\Books\\Index.cshtml",
@@ -635,19 +782,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Views\\Bag\\Index.cshtml",
-              "RelativeDocumentMoniker": "BookMarket\\Views\\Bag\\Index.cshtml",
-              "ToolTip": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Views\\Bag\\Index.cshtml",
-              "RelativeToolTip": "BookMarket\\Views\\Bag\\Index.cshtml",
-              "ViewState": "AQIAAGIAAAAAAAAAAAAjwHEAAABZAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-15T15:03:05.785Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 37,
               "Title": "CRUD.cshtml",
               "DocumentMoniker": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Views\\Books\\CRUD.cshtml",
               "RelativeDocumentMoniker": "BookMarket\\Views\\Books\\CRUD.cshtml",
@@ -659,7 +794,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 39,
               "Title": "SignupForm.cshtml",
               "DocumentMoniker": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Views\\Account\\SignupForm.cshtml",
               "RelativeDocumentMoniker": "BookMarket\\Views\\Account\\SignupForm.cshtml",
@@ -671,7 +806,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 38,
               "Title": "LoginP.cshtml",
               "DocumentMoniker": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Views\\Account\\LoginP.cshtml",
               "RelativeDocumentMoniker": "BookMarket\\Views\\Account\\LoginP.cshtml",
@@ -683,7 +818,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 40,
               "Title": "AddNewBook.cshtml",
               "DocumentMoniker": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Views\\Books\\AddNewBook.cshtml",
               "RelativeDocumentMoniker": "BookMarket\\Views\\Books\\AddNewBook.cshtml",
@@ -695,7 +830,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 76,
+              "DocumentIndex": 82,
               "Title": "20240625023937_Account_IMAGE.cs",
               "DocumentMoniker": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Migrations\\20240625023937_Account_IMAGE.cs",
               "RelativeDocumentMoniker": "BookMarket\\Migrations\\20240625023937_Account_IMAGE.cs",
@@ -707,7 +842,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 41,
               "Title": "ValidationController.cs",
               "DocumentMoniker": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Controllers\\ValidationController.cs",
               "RelativeDocumentMoniker": "BookMarket\\Controllers\\ValidationController.cs",
@@ -719,7 +854,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 42,
               "Title": "CreateProducerForm.cshtml",
               "DocumentMoniker": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Views\\Producers\\CreateProducerForm.cshtml",
               "RelativeDocumentMoniker": "BookMarket\\Views\\Producers\\CreateProducerForm.cshtml",
@@ -731,7 +866,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 43,
               "Title": "EditBook.cshtml",
               "DocumentMoniker": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Views\\Books\\EditBook.cshtml",
               "RelativeDocumentMoniker": "BookMarket\\Views\\Books\\EditBook.cshtml",
@@ -743,7 +878,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 44,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Views\\Producers\\Index.cshtml",
               "RelativeDocumentMoniker": "BookMarket\\Views\\Producers\\Index.cshtml",
@@ -755,7 +890,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 45,
               "Title": "View.cshtml",
               "DocumentMoniker": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Views\\Writers\\View.cshtml",
               "RelativeDocumentMoniker": "BookMarket\\Views\\Writers\\View.cshtml",
@@ -767,7 +902,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 46,
               "Title": "EditProducer.cshtml",
               "DocumentMoniker": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Views\\Producers\\EditProducer.cshtml",
               "RelativeDocumentMoniker": "BookMarket\\Views\\Producers\\EditProducer.cshtml",
@@ -779,7 +914,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 48,
               "Title": "BookNameValidationAttribute.cs",
               "DocumentMoniker": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Models\\MyValidationAttributes\\BookNameValidationAttribute.cs",
               "RelativeDocumentMoniker": "BookMarket\\Models\\MyValidationAttributes\\BookNameValidationAttribute.cs",
@@ -791,7 +926,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 47,
               "Title": "View.cshtml",
               "DocumentMoniker": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Views\\Producers\\View.cshtml",
               "RelativeDocumentMoniker": "BookMarket\\Views\\Producers\\View.cshtml",
@@ -803,7 +938,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 49,
               "Title": "Book.cs",
               "DocumentMoniker": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Models\\Book.cs",
               "RelativeDocumentMoniker": "BookMarket\\Models\\Book.cs",
@@ -815,19 +950,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
-              "Title": "UniqueAccNameAttribute.cs",
-              "DocumentMoniker": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Models\\MyValidationAttributes\\UniqueAccNameAttribute.cs",
-              "RelativeDocumentMoniker": "BookMarket\\Models\\MyValidationAttributes\\UniqueAccNameAttribute.cs",
-              "ToolTip": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Models\\MyValidationAttributes\\UniqueAccNameAttribute.cs",
-              "RelativeToolTip": "BookMarket\\Models\\MyValidationAttributes\\UniqueAccNameAttribute.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACAAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-14T09:56:47.999Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 50,
               "Title": "296207483_567228918285055_3317484684840781442_n.jpg - Bitmap [640x640, 24 bit, JPG]",
               "DocumentMoniker": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\wwwroot\\images\\296207483_567228918285055_3317484684840781442_n.jpg",
               "RelativeDocumentMoniker": "BookMarket\\wwwroot\\images\\296207483_567228918285055_3317484684840781442_n.jpg",
@@ -838,7 +961,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 51,
               "Title": "81fd43cc-60bc-410b-9012-c7c20721029d.jpg - Bitmap [1080x1080, 24 bit, JPG]",
               "DocumentMoniker": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\wwwroot\\images\\81fd43cc-60bc-410b-9012-c7c20721029d.jpg",
               "RelativeDocumentMoniker": "BookMarket\\wwwroot\\images\\81fd43cc-60bc-410b-9012-c7c20721029d.jpg",
@@ -849,7 +972,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 52,
               "Title": "IMG_2046.jpg - Bitmap [6012x4008, 24 bit, JPG]",
               "DocumentMoniker": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\wwwroot\\images\\IMG_2046.jpg",
               "RelativeDocumentMoniker": "BookMarket\\wwwroot\\images\\IMG_2046.jpg",
@@ -860,7 +983,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 53,
               "Title": "PastBirthdateAttribute.cs",
               "DocumentMoniker": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Models\\MyValidationAttributes\\PastBirthdateAttribute.cs",
               "RelativeDocumentMoniker": "BookMarket\\Models\\MyValidationAttributes\\PastBirthdateAttribute.cs",
@@ -872,7 +995,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 54,
               "Title": "noun-book-bag-3249030.svg",
               "DocumentMoniker": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\wwwroot\\images\\noun-book-bag-3249030.svg",
               "RelativeDocumentMoniker": "BookMarket\\wwwroot\\images\\noun-book-bag-3249030.svg",
@@ -884,7 +1007,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 55,
               "Title": "IMG_\u0662\u0660\u0662\u0664\u0660\u0664\u0661\u0660_\u0660\u0666\u0662\u0668\u0661\u0664.jpg - Bitmap [3456x4608, 24 bit, JPG]",
               "DocumentMoniker": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\wwwroot\\images\\IMG_\u0662\u0660\u0662\u0664\u0660\u0664\u0661\u0660_\u0660\u0666\u0662\u0668\u0661\u0664.jpg",
               "RelativeDocumentMoniker": "BookMarket\\wwwroot\\images\\IMG_\u0662\u0660\u0662\u0664\u0660\u0664\u0661\u0660_\u0660\u0666\u0662\u0668\u0661\u0664.jpg",
@@ -895,7 +1018,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 56,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Views\\Test\\Index.cshtml",
               "RelativeDocumentMoniker": "BookMarket\\Views\\Test\\Index.cshtml",
@@ -907,7 +1030,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 57,
               "Title": "BookConfig.cs",
               "DocumentMoniker": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Models\\ModelSpecialConfigurations\\BookConfig.cs",
               "RelativeDocumentMoniker": "BookMarket\\Models\\ModelSpecialConfigurations\\BookConfig.cs",
@@ -919,7 +1042,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 58,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Views\\Writers\\Index.cshtml",
               "RelativeDocumentMoniker": "BookMarket\\Views\\Writers\\Index.cshtml",
@@ -931,7 +1054,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 75,
+              "DocumentIndex": 81,
               "Title": "20240425091648_facebookAcc.cs",
               "DocumentMoniker": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Migrations\\20240425091648_facebookAcc.cs",
               "RelativeDocumentMoniker": "BookMarket\\Migrations\\20240425091648_facebookAcc.cs",
@@ -943,7 +1066,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
+              "DocumentIndex": 59,
               "Title": "WritersController.cs",
               "DocumentMoniker": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Controllers\\WritersController.cs",
               "RelativeDocumentMoniker": "BookMarket\\Controllers\\WritersController.cs",
@@ -955,7 +1078,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
+              "DocumentIndex": 60,
               "Title": "ProducerNameValidationAttribute.cs",
               "DocumentMoniker": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Models\\MyValidationAttributes\\ProducerNameValidationAttribute.cs",
               "RelativeDocumentMoniker": "BookMarket\\Models\\MyValidationAttributes\\ProducerNameValidationAttribute.cs",
@@ -967,7 +1090,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 54,
+              "DocumentIndex": 61,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "BookMarket\\Views\\Home\\Index.cshtml",
@@ -979,7 +1102,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 57,
+              "DocumentIndex": 64,
               "Title": "ProducerMetaData.cs",
               "DocumentMoniker": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Models\\MetaDataModels\\ProducerMetaData.cs",
               "RelativeDocumentMoniker": "BookMarket\\Models\\MetaDataModels\\ProducerMetaData.cs",
@@ -991,7 +1114,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 58,
+              "DocumentIndex": 65,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Views\\Writers\\Edit.cshtml",
               "RelativeDocumentMoniker": "BookMarket\\Views\\Writers\\Edit.cshtml",
@@ -1003,7 +1126,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 56,
+              "DocumentIndex": 63,
               "Title": "Producer.cs",
               "DocumentMoniker": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Models\\Producer.cs",
               "RelativeDocumentMoniker": "BookMarket\\Models\\Producer.cs",
@@ -1015,7 +1138,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 55,
+              "DocumentIndex": 62,
               "Title": "Privacy.cshtml",
               "DocumentMoniker": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Views\\Home\\Privacy.cshtml",
               "RelativeDocumentMoniker": "BookMarket\\Views\\Home\\Privacy.cshtml",
@@ -1027,19 +1150,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 59,
-              "Title": "ErrorViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Models\\ErrorViewModel.cs",
-              "RelativeDocumentMoniker": "BookMarket\\Models\\ErrorViewModel.cs",
-              "ToolTip": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Models\\ErrorViewModel.cs",
-              "RelativeToolTip": "BookMarket\\Models\\ErrorViewModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-01T10:46:34.051Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 74,
+              "DocumentIndex": 80,
               "Title": "20240420101904_cost_Bag.cs",
               "DocumentMoniker": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Migrations\\20240420101904_cost_Bag.cs",
               "RelativeDocumentMoniker": "BookMarket\\Migrations\\20240420101904_cost_Bag.cs",
@@ -1051,7 +1162,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 62,
+              "DocumentIndex": 68,
               "Title": "UniqueAccEmailAttribute.cs",
               "DocumentMoniker": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Models\\MyValidationAttributes\\UniqueAccEmailAttribute.cs",
               "RelativeDocumentMoniker": "BookMarket\\Models\\MyValidationAttributes\\UniqueAccEmailAttribute.cs",
@@ -1063,7 +1174,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 60,
+              "DocumentIndex": 66,
               "Title": "CreateRedirectorForm.cshtml",
               "DocumentMoniker": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Views\\Writers\\CreateRedirectorForm.cshtml",
               "RelativeDocumentMoniker": "BookMarket\\Views\\Writers\\CreateRedirectorForm.cshtml",
@@ -1075,7 +1186,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 61,
+              "DocumentIndex": 67,
               "Title": "UniqueProducerNameAttribute.cs",
               "DocumentMoniker": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Models\\MyValidationAttributes\\UniqueProducerNameAttribute.cs",
               "RelativeDocumentMoniker": "BookMarket\\Models\\MyValidationAttributes\\UniqueProducerNameAttribute.cs",
@@ -1087,7 +1198,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 63,
+              "DocumentIndex": 69,
               "Title": "20240415152821_Bag_table_v2.cs",
               "DocumentMoniker": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Migrations\\20240415152821_Bag_table_v2.cs",
               "RelativeDocumentMoniker": "BookMarket\\Migrations\\20240415152821_Bag_table_v2.cs",
@@ -1099,7 +1210,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 73,
+              "DocumentIndex": 79,
               "Title": "20240415091036_Bag_table.cs",
               "DocumentMoniker": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Migrations\\20240415091036_Bag_table.cs",
               "RelativeDocumentMoniker": "BookMarket\\Migrations\\20240415091036_Bag_table.cs",
@@ -1111,7 +1222,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 71,
+              "DocumentIndex": 77,
               "Title": "20240414113038_Accounts_Table_v2.cs",
               "DocumentMoniker": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Migrations\\20240414113038_Accounts_Table_v2.cs",
               "RelativeDocumentMoniker": "BookMarket\\Migrations\\20240414113038_Accounts_Table_v2.cs",
@@ -1123,7 +1234,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 72,
+              "DocumentIndex": 78,
               "Title": "20240414100703_Accounts_Table.cs",
               "DocumentMoniker": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Migrations\\20240414100703_Accounts_Table.cs",
               "RelativeDocumentMoniker": "BookMarket\\Migrations\\20240414100703_Accounts_Table.cs",
@@ -1135,7 +1246,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 64,
+              "DocumentIndex": 70,
               "Title": "main.js",
               "DocumentMoniker": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\wwwroot\\js\\main.js",
               "RelativeDocumentMoniker": "BookMarket\\wwwroot\\js\\main.js",
@@ -1147,7 +1258,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 65,
+              "DocumentIndex": 71,
               "Title": "jquery.js",
               "DocumentMoniker": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\wwwroot\\lib\\jquery\\dist\\jquery.js",
               "RelativeDocumentMoniker": "BookMarket\\wwwroot\\lib\\jquery\\dist\\jquery.js",
@@ -1159,7 +1270,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 66,
+              "DocumentIndex": 72,
               "Title": "BookCategory.cs",
               "DocumentMoniker": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Models\\Enums\\BookCategory.cs",
               "RelativeDocumentMoniker": "BookMarket\\Models\\Enums\\BookCategory.cs",
@@ -1171,7 +1282,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 70,
+              "DocumentIndex": 76,
               "Title": "20240402001744_First.cs",
               "DocumentMoniker": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Migrations\\20240402001744_First.cs",
               "RelativeDocumentMoniker": "BookMarket\\Migrations\\20240402001744_First.cs",
@@ -1183,7 +1294,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 67,
+              "DocumentIndex": 73,
               "Title": "20240402001604_fourth.cs",
               "DocumentMoniker": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Migrations\\20240402001604_fourth.cs",
               "RelativeDocumentMoniker": "BookMarket\\Migrations\\20240402001604_fourth.cs",
@@ -1195,7 +1306,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 68,
+              "DocumentIndex": 74,
               "Title": "20240402000137_Third.cs",
               "DocumentMoniker": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Migrations\\20240402000137_Third.cs",
               "RelativeDocumentMoniker": "BookMarket\\Migrations\\20240402000137_Third.cs",
@@ -1207,7 +1318,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 22,
               "Title": "20240401235919_Second.cs",
               "DocumentMoniker": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Migrations\\20240401235919_Second.cs",
               "RelativeDocumentMoniker": "BookMarket\\Migrations\\20240401235919_Second.cs",
@@ -1219,7 +1330,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 23,
               "Title": "20240401235506_First.cs",
               "DocumentMoniker": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Migrations\\20240401235506_First.cs",
               "RelativeDocumentMoniker": "BookMarket\\Migrations\\20240401235506_First.cs",
@@ -1231,7 +1342,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 69,
+              "DocumentIndex": 75,
               "Title": "20240401233949_First.cs",
               "DocumentMoniker": "C:\\Users\\bedo\\source\\repos\\BookMarket\\BookMarket\\Migrations\\20240401233949_First.cs",
               "RelativeDocumentMoniker": "BookMarket\\Migrations\\20240401233949_First.cs",

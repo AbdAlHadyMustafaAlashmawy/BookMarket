@@ -1,6 +1,7 @@
 ﻿using BookMarket.Models;
 using BookMarket.Models.Helpers;
 using BookMarket.Repos;
+using BookMarket.Repos.Repo_Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
@@ -10,13 +11,13 @@ namespace BookMarket.Controllers
     public class ProducersController : Controller
     {
         private readonly AppDbContext _context;
-        private readonly ProducersRepository _producersRepo;
-        private readonly BooksRepository _booksRepo;
-        public ProducersController(AppDbContext context)
+        private readonly IProducersRepository _producersRepo;
+        private readonly IBooksReposatory _booksRepo;
+        public ProducersController(AppDbContext context,IBooksReposatory booksRepo,IProducersRepository producerRepo)
         {
             _context= context;
-            _producersRepo = new ProducersRepository();
-            _booksRepo = new BooksRepository();
+            _producersRepo = producerRepo;
+            _booksRepo = booksRepo;
         }
         public async Task<IActionResult> Index()
         {

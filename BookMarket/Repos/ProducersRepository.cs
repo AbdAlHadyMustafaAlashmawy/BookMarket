@@ -1,17 +1,18 @@
 ﻿using BookMarket.Models;
 using BookMarket.Models.Helpers;
+using BookMarket.Repos.Repo_Interfaces;
 using Microsoft.EntityFrameworkCore;
 using System.Net;
 
 namespace BookMarket.Repos
 {
-    public class ProducersRepository
+    public class ProducersRepository:IProducersRepository
     {
-        private readonly AppDbContext context;
 
-        public ProducersRepository()
+        private readonly AppDbContext context;
+        public ProducersRepository(AppDbContext _context)
         {
-            context = new AppDbContext(Helper._configurationPub);
+            context = _context;
         }
         public List<Producer> GetAll()
         {
