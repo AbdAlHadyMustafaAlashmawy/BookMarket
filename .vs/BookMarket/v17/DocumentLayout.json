@@ -3,7 +3,7 @@
   "WorkspaceRootPath": "C:\\Users\\bedo\\source\\repos\\BookMarket\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7023DF65-C749-40AF-8FE6-D15B60CBA3AF}|BookMarket\\BookMarket.csproj|C:\\Users\\bedo\\source\\repos\\BookMarket\\bookmarket\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7023DF65-C749-40AF-8FE6-D15B60CBA3AF}|BookMarket\\BookMarket.csproj|c:\\users\\bedo\\source\\repos\\bookmarket\\bookmarket\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7023DF65-C749-40AF-8FE6-D15B60CBA3AF}|BookMarket\\BookMarket.csproj|solutionrelative:bookmarket\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -11,7 +11,7 @@
       "RelativeMoniker": "D:0:0:{7023DF65-C749-40AF-8FE6-D15B60CBA3AF}|BookMarket\\BookMarket.csproj|solutionrelative:bookmarket\\repos\\writersrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7023DF65-C749-40AF-8FE6-D15B60CBA3AF}|BookMarket\\BookMarket.csproj|c:\\users\\bedo\\source\\repos\\bookmarket\\bookmarket\\repos\\genaricreposatory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7023DF65-C749-40AF-8FE6-D15B60CBA3AF}|BookMarket\\BookMarket.csproj|C:\\Users\\bedo\\source\\repos\\BookMarket\\bookmarket\\repos\\genaricreposatory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7023DF65-C749-40AF-8FE6-D15B60CBA3AF}|BookMarket\\BookMarket.csproj|solutionrelative:bookmarket\\repos\\genaricreposatory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -47,11 +47,11 @@
       "RelativeMoniker": "D:0:0:{7023DF65-C749-40AF-8FE6-D15B60CBA3AF}|BookMarket\\BookMarket.csproj|solutionrelative:bookmarket\\controllers\\producerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7023DF65-C749-40AF-8FE6-D15B60CBA3AF}|BookMarket\\BookMarket.csproj|c:\\users\\bedo\\source\\repos\\bookmarket\\bookmarket\\repos\\repo_interfaces\\iproducersrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7023DF65-C749-40AF-8FE6-D15B60CBA3AF}|BookMarket\\BookMarket.csproj|C:\\Users\\bedo\\source\\repos\\BookMarket\\bookmarket\\repos\\repo_interfaces\\iproducersrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7023DF65-C749-40AF-8FE6-D15B60CBA3AF}|BookMarket\\BookMarket.csproj|solutionrelative:bookmarket\\repos\\repo_interfaces\\iproducersrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7023DF65-C749-40AF-8FE6-D15B60CBA3AF}|BookMarket\\BookMarket.csproj|c:\\users\\bedo\\source\\repos\\bookmarket\\bookmarket\\repos\\repo_interfaces\\iwritersrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7023DF65-C749-40AF-8FE6-D15B60CBA3AF}|BookMarket\\BookMarket.csproj|C:\\Users\\bedo\\source\\repos\\BookMarket\\bookmarket\\repos\\repo_interfaces\\iwritersrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7023DF65-C749-40AF-8FE6-D15B60CBA3AF}|BookMarket\\BookMarket.csproj|solutionrelative:bookmarket\\repos\\repo_interfaces\\iwritersrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -59,7 +59,7 @@
       "RelativeMoniker": "D:0:0:{7023DF65-C749-40AF-8FE6-D15B60CBA3AF}|BookMarket\\BookMarket.csproj|solutionrelative:bookmarket\\repos\\repo_interfaces\\ibooksreposatory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7023DF65-C749-40AF-8FE6-D15B60CBA3AF}|BookMarket\\BookMarket.csproj|c:\\users\\bedo\\source\\repos\\bookmarket\\bookmarket\\repos\\repo_interfaces\\ibagsreposatory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7023DF65-C749-40AF-8FE6-D15B60CBA3AF}|BookMarket\\BookMarket.csproj|C:\\Users\\bedo\\source\\repos\\BookMarket\\bookmarket\\repos\\repo_interfaces\\ibagsreposatory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7023DF65-C749-40AF-8FE6-D15B60CBA3AF}|BookMarket\\BookMarket.csproj|solutionrelative:bookmarket\\repos\\repo_interfaces\\ibagsreposatory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -355,8 +355,7 @@
               "ViewState": "AQIAAB8AAAAAAAAAAAAcwAgAAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-30T06:28:09.563Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -368,8 +367,7 @@
               "RelativeToolTip": "BookMarket\\AppDbContext.cs",
               "ViewState": "AQIAABAAAAAAAAAAAAAgwB8AAAAuAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-01T11:15:20.117Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-01T11:15:20.117Z"
             },
             {
               "$type": "Document",
@@ -381,8 +379,7 @@
               "RelativeToolTip": "BookMarket\\Models\\MyValidationAttributes\\UniqueAccNameAttribute.cs",
               "ViewState": "AQIAAAEAAAAAAAAAAAAawBAAAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-14T09:56:47.999Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-14T09:56:47.999Z"
             },
             {
               "$type": "Document",
@@ -407,8 +404,7 @@
               "RelativeToolTip": "BookMarket\\appsettings.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-04-01T11:20:08.558Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-01T11:20:08.558Z"
             },
             {
               "$type": "Document",
@@ -420,8 +416,7 @@
               "RelativeToolTip": "BookMarket\\Repos\\GenaricReposatory.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-15T16:52:20.056Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-15T16:52:20.056Z"
             },
             {
               "$type": "Document",
@@ -433,8 +428,7 @@
               "RelativeToolTip": "BookMarket\\Repos\\WritersRepository.cs",
               "ViewState": "AQIAAB0AAAAAAAAAAAAIwAwAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-30T06:31:24.104Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-30T06:31:24.104Z"
             },
             {
               "$type": "Document",
@@ -446,8 +440,7 @@
               "RelativeToolTip": "BookMarket\\Repos\\Repo_Interfaces\\IBooksReposatory.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAqwAgAAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-15T17:59:27.243Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-15T17:59:27.243Z"
             },
             {
               "$type": "Document",
@@ -459,8 +452,7 @@
               "RelativeToolTip": "BookMarket\\Repos\\Repo_Interfaces\\IWritersRepository.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAA5AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-15T23:46:33.65Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-15T23:46:33.65Z"
             },
             {
               "$type": "Document",
@@ -472,8 +464,7 @@
               "RelativeToolTip": "BookMarket\\Repos\\Repo_Interfaces\\IProducersRepository.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAA0AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-15T23:42:00.511Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-15T23:42:00.511Z"
             },
             {
               "$type": "Document",
@@ -485,8 +476,7 @@
               "RelativeToolTip": "BookMarket\\Controllers\\ProducersController.cs",
               "ViewState": "AQIAAAYAAAAAAAAAAAD4vxIAAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-03T04:40:07.5Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-03T04:40:07.5Z"
             },
             {
               "$type": "Document",
@@ -498,8 +488,7 @@
               "RelativeToolTip": "BookMarket\\Repos\\BagsReposatory.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-15T16:59:15.267Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-15T16:59:15.267Z"
             },
             {
               "$type": "Document",
@@ -511,8 +500,7 @@
               "RelativeToolTip": "BookMarket\\Controllers\\BooksController.cs",
               "ViewState": "AQIAABUAAAAAAAAAAAAjwBkAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-03T04:38:53.691Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-03T04:38:53.691Z"
             },
             {
               "$type": "Document",
@@ -524,8 +512,7 @@
               "RelativeToolTip": "BookMarket\\Repos\\BooksRepository.cs",
               "ViewState": "AQIAACEAAAAAAAAAAAA4wA4AAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-30T06:03:59.239Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-30T06:03:59.239Z"
             },
             {
               "$type": "Document",
@@ -537,8 +524,7 @@
               "RelativeToolTip": "BookMarket\\Repos\\Repo_Interfaces\\IBagsReposatory.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-15T23:52:18.757Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-15T23:52:18.757Z"
             },
             {
               "$type": "Document",
