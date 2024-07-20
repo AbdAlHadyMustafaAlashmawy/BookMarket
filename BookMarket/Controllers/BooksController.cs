@@ -32,7 +32,8 @@ namespace BookMarket.Controllers
             {
                 isAdmin = bool.Parse(isAdminClaim);
             }
-
+            var IsRegistered = User.Claims.Any();
+            ViewBag.IsRegistered = IsRegistered;
             // Pass the IsAdmin value to the view
             ViewBag.IsAdmin = isAdmin;
             var Books = await _booksRepo.GetWholeAsync();
@@ -110,6 +111,15 @@ namespace BookMarket.Controllers
         }
         public async Task<IActionResult> CRUD(string Kind,int MaxCost=1000000,int MinCost=0,string Name= null,int pageNo= 1,int NoOfRecordsPerPage=0)
         {
+            var isAdminClaim = User.Claims.FirstOrDefault(c => c.Type == "IsAdmin")?.Value;
+            bool isAdmin = false;
+            if (isAdminClaim != null)
+            {
+                isAdmin = bool.Parse(isAdminClaim);
+            }
+            if (isAdmin)
+            {
+
             IQueryable<Book> booksQuery = _context.Books;
             TempData["books"] = _booksRepo.GetAll();
             if (!string.IsNullOrEmpty(Kind))
@@ -141,6 +151,11 @@ namespace BookMarket.Controllers
             ViewBag.NoOfRecordsPerPage = NoOfRecordsPerPage;
             books = books.Skip(NoOfRecordsToSkip).Take(NoOfRecordsPerPage).ToList();
             return View(books);
+            }
+            else
+            {
+                return RedirectToAction("Index", "Books");
+            }
 
         }
         [HttpPost]

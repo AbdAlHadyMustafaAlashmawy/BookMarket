@@ -180,7 +180,7 @@
                 <div class="book-writer">Writer: @book.Writer.Name</div>
                 <div class="card-footer d-flex align-items-center justify-content-around py-3">
                     @{
-                        if (!ViewBag.IsAdmin)
+                        if (!ViewBag.IsAdmin && ViewBag.IsRegistered)
                         {
                         <a href="javascript:void(0);" data-book-id="@book.Id" class="btn btn-primary add-to-bag">Add to bag</a>
                         }

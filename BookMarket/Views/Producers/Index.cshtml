@@ -54,7 +54,13 @@
     <div class="container">
 
         <h1 class="mt-5">Producers</h1>
+        @{
+
+        if (ViewBag.IsAdmin && ViewBag.IsRegistered)
+        {
         <a href="@Url.Action("CreateProducerForm","Producers")" class="btn btn-outline-success">Create Producer</a>
+        }
+        }
         <br />
         <br />
         <table class="table table-striped table-hover">
@@ -69,6 +75,23 @@
             <tbody>
                 @foreach (var item in Model)
                 {
+                    if (!ViewBag.IsAdmin && ViewBag.IsRegistered)
+                    {
+                        <tr>
+                            <td><img src="@item.LogoUrl" class="logo rounded-circle" /></td>
+                            <td>@item.Name</td>
+                            <td>@item.Description</td>
+                            <td>
+                                <div class="btn-group" role="group">
+
+                                    <a href="@Url.Action("View","Producers",new { id = @item.Id })" class="btn btn-success">View</a>
+
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                    else
+                    {
                     <tr>
                         <td><img src="@item.LogoUrl" class="logo rounded-circle" /></td>
                         <td>@item.Name</td>
@@ -83,6 +106,8 @@
                             </div>
                         </td>
                     </tr>
+                        
+                    }
                 }
             </tbody>
         </table>

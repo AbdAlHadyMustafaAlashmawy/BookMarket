@@ -36,7 +36,10 @@ namespace BookMarket
             builder.Services.AddScoped<IWritersRepository, WritersRepository>();
             builder.Services.AddScoped<IProducersRepository, ProducersRepository>();
             builder.Services.AddScoped<IBagsReposatory, BagsReposatory>();
-            builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie();
+            builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(options=>
+            {
+                options.LoginPath= "/Account/LoginP";
+            });
             // Register the AppDbContext with dependency injection.
             //builder.Services.AddDbContext<AppDbContext>(options =>
             //    options.UseSqlServer(builder.Configuration.GetConnectionString("Conn")));

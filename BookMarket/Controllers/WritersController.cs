@@ -14,6 +14,16 @@ namespace BookMarket.Controllers
 
         public IActionResult Index()
         {
+            var isAdminClaim = User.Claims.FirstOrDefault(c => c.Type == "IsAdmin")?.Value;
+            bool isAdmin = false;
+            if (isAdminClaim != null)
+            {
+                isAdmin = bool.Parse(isAdminClaim);
+            }
+            var IsRegistered = User.Claims.Any();
+            ViewBag.IsRegistered = IsRegistered;
+            // Pass the IsAdmin value to the view
+            ViewBag.IsAdmin = isAdmin;
             var writers = _context.Writers.ToList();
             return View(writers);
         }

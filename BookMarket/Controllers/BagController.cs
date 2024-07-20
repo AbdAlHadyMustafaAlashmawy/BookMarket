@@ -8,7 +8,7 @@ using static NuGet.Packaging.PackagingConstants;
 
 namespace BookMarket.Controllers
 {
-    public class BagController:Controller
+    public class BagController : Controller
     {
         [HttpGet("count")]
         public ActionResult<int> GetBagElementsNum()
@@ -56,7 +56,7 @@ namespace BookMarket.Controllers
         {
             using (var context = new AppDbContext(Helper._configurationPub))
             {
-                var element =context.Bag.Find(id);
+                var element = context.Bag.Find(id);
                 context.Bag.Remove(element);
                 context.SaveChanges();
             }
@@ -67,7 +67,7 @@ namespace BookMarket.Controllers
         // Action to get count of items in the bag
         public IActionResult GetBagItemCount()
         {
-            var name = HttpContext?.Request?.Cookies["UserName"]?.ToString();
+            var name = User.Claims.FirstOrDefault(c => c.Type == "UserName").Value;
             if (name != null)
             {
                 using (var context = new AppDbContext(Helper._configurationPub))
@@ -84,37 +84,54 @@ namespace BookMarket.Controllers
             return Json(new { itemCount = 0 });
         }
 
+
+
+
         public IActionResult AddOrder(int BookId)
         {
-            Bag bag = new Bag() { BookId=BookId};
-            if (HttpContext.Request.Cookies["ID"] != null && int.TryParse(HttpContext.Request.Cookies["ID"].ToString(), out int accountId))
+            using (var context = new AppDbContext(Helper._configurationPub))
             {
-                if (accountId != 0)
+                Bag bag = new Bag() { BookId = BookId };
+                var userNameClaim = User.Claims.FirstOrDefault(c => c.Type == "UserName")?.Value;
+
+                if (userNameClaim != null)
                 {
-                    bag.AccountId = accountId;
-                    
+                    // Find the account with the specified UserName
+                    var account = context.Accounts.FirstOrDefault(x => x.UserName == userNameClaim);
+
+                    if (account != null)
+                    {
+                        int accountId = account.Id;
+
+                        // Check if the account was found and try to parse the account ID
+                        if (accountId != 0)
+                        {
+                            bag.AccountId = accountId;
+                            bag.cost = (double)context.Books.FirstOrDefault(x => x.Id == BookId).Cost;
+
+                            context.Bag.Add(bag);
+                            context.SaveChanges();
+                            TempData["Notification"] = "Order added successfully.";
+                            return RedirectToAction("Index", "Books");
+                        }
+                        else
+                        {
+                            return BadRequest("Invalid or missing account ID.");
+                        }
+                    }
+                    else
+                    {
+                        return RedirectToAction("LoginP", "Account");
+                    }
                 }
                 else
                 {
-                    return BadRequest("Invalid or missing account ID.");
+                    TempData["Notification"] = "Failed to get user information.";
+                    return RedirectToAction("Index", "Books");
                 }
-                using (var context = new AppDbContext(Helper._configurationPub))
-                {
-                    bag.cost =(double)context.Books.FirstOrDefault(x => x.Id == BookId).Cost;
-                    
-                    context.Bag.Add(bag);
-                    context.SaveChanges();
-                    TempData["Notification"] = "Order added successfully.";
-                    return RedirectToAction("Index","Books");
-                }
-
             }
-            else
-            {
-                TempData["Notification"] = "failed";
-                return RedirectToAction("Index", "Books");
-            }
-
         }
+
     }
 }
+
