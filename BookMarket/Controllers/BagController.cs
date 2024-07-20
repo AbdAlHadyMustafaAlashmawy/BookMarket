@@ -1,6 +1,7 @@
 ﻿using BookMarket.Models;
 using BookMarket.Models.DTOs;
 using BookMarket.Models.Helpers;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using static NuGet.Packaging.PackagingConstants;
@@ -18,16 +19,20 @@ namespace BookMarket.Controllers
                 return Ok(count);
             }
         }
-
+        [Authorize]
         public IActionResult Index(Bag bag)
         {
             using (var context = new AppDbContext(Helper._configurationPub))
             {
-                var name = HttpContext.Request.Cookies["UserName"];
+                if (bool.Parse(User.Claims.FirstOrDefault(c => c.Type == "IsAdmin")?.Value))
+                {
+                    return RedirectToAction("Index", "Books");
+                }
+                var name = User.Claims.FirstOrDefault(c => c.Type == "UserName")?.Value;
                 if (name == null)
                 {
                     // Handle the case when the cookie is not found or user is not logged in
-                    return RedirectToAction("Login", "Account");
+                    return RedirectToAction("LoginP", "Account");
                 }
 
                 var groupedOrders = context.Bag

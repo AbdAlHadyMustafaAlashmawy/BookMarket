@@ -7,6 +7,10 @@ using Microsoft.Extensions.Hosting;
 using BookMarket.Models.Helpers;
 using BookMarket.Repos.Repo_Interfaces;
 using BookMarket.Repos;
+using Microsoft.Extensions.Options;
+using BookMarket.Filters;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authorization;
 
 namespace BookMarket
 {
@@ -23,12 +27,16 @@ namespace BookMarket
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
-            builder.Services.AddControllersWithViews().AddRazorRuntimeCompilation();
+            builder.Services.AddControllersWithViews(options =>
+            {
+                options.Filters.Add(new ExceptionHandelAttribute());
+            }).AddRazorRuntimeCompilation();
             builder.Services.AddDbContext<AppDbContext>();
             builder.Services.AddScoped<IBooksReposatory, BooksRepository>();
             builder.Services.AddScoped<IWritersRepository, WritersRepository>();
             builder.Services.AddScoped<IProducersRepository, ProducersRepository>();
             builder.Services.AddScoped<IBagsReposatory, BagsReposatory>();
+            builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie();
             // Register the AppDbContext with dependency injection.
             //builder.Services.AddDbContext<AppDbContext>(options =>
             //    options.UseSqlServer(builder.Configuration.GetConnectionString("Conn")));
@@ -46,6 +54,7 @@ namespace BookMarket
             app.UseStaticFiles();
 
             app.UseRouting();
+            app.UseAuthentication();
             app.UseAuthorization();
             app.MapControllerRoute(
                 name:"MyRoute", "DisplayMyBag/{action=Index}",
@@ -53,7 +62,7 @@ namespace BookMarket
                 );
             app.MapControllerRoute(
                 name: "default",
-                pattern: "{controller=Account}/{action=LoginP}");
+                pattern: "{controller=Books}/{action=Index}");
 
             app.Run();
         }

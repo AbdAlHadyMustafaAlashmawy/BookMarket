@@ -157,8 +157,12 @@
         <br />
         <input value="Search" name="Search" style="width:100%" type="submit" class="btn btn-outline-primary" />
     </form>
-
-    <a asp-action="CRUD" class="btn btn-primary">CRUD books</a>
+    @{
+        if (ViewBag.IsAdmin)
+        {
+            <a asp-action="CRUD" class="btn btn-primary">CRUD books</a>
+        }
+    }
     <div>
         <span id="bag-count">@ViewBag.BagCount</span>
     </div>
@@ -175,7 +179,12 @@
                 <div class="book-producer">Producer: @book.Producer.Name</div>
                 <div class="book-writer">Writer: @book.Writer.Name</div>
                 <div class="card-footer d-flex align-items-center justify-content-around py-3">
-                    <a href="javascript:void(0);" data-book-id="@book.Id" class="btn btn-primary add-to-bag">Add to bag</a>
+                    @{
+                        if (!ViewBag.IsAdmin)
+                        {
+                        <a href="javascript:void(0);" data-book-id="@book.Id" class="btn btn-primary add-to-bag">Add to bag</a>
+                        }
+                    }
                     <a href="@Url.Action("View", "Books", new { id = @book.Id })" class="btn btn-success">View</a>
                 </div>
             </div>

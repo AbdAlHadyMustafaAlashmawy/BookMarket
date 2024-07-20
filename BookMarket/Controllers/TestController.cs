@@ -2,14 +2,18 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Routing.Constraints;
 using BookMarket.Models;
+using BookMarket.Filters;
+using Microsoft.AspNetCore.Http.HttpResults;
 
 
 namespace BookMarket.Controllers
 {
     public class TestController : Controller
     {
+       // [ExceptionHandel]
         public IActionResult Index(string Sname)
         {
+            throw new Exception("Error");
             ViewBag.ImgUploaded = false;
             ViewData["ImageUrl"] = Sname;
             return View();

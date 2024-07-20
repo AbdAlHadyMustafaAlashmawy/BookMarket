@@ -1,9 +1,12 @@
 ﻿using BookMarket.Models;
 using BookMarket.Models.Helpers;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using System.IO;
 using System.Net;
+using System.Security.Claims;
 
 namespace BookMarket.Controllers
 {
@@ -13,8 +16,7 @@ namespace BookMarket.Controllers
         {
             ViewBag.ImgUploaded = false;
             ViewData["ImageUrl"] = Sname;
-
-            string name = HttpContext.Request.Cookies["UserName"];
+            string? name =HttpContext.User.Claims.FirstOrDefault(c => c.Type == "Name").Value;
             if (string.IsNullOrEmpty(name))
             {
                 return Unauthorized();
@@ -22,6 +24,7 @@ namespace BookMarket.Controllers
 
             using (var context = new AppDbContext(Helper._configurationPub))
             {
+
                 Account UserAccount = context.Accounts.FirstOrDefault(x => x.UserName == name);
 
                 if (UserAccount == null)
@@ -59,9 +62,14 @@ namespace BookMarket.Controllers
                 if (context.Accounts.Where(x => x.UserName == account.UserName).Where(x => x.Password == account.Password).Any())
                 {
                     TempData["valid"] = true;
-                    HttpContext.Response.Cookies.Append("UserName", account.UserName);
-                    HttpContext.Response.Cookies.Append("ID", context.Accounts.FirstOrDefault(x=>x.UserName==account.UserName).Id.ToString());
-
+                    //HttpContext.Response.Cookies.Append("UserName", account.UserName);
+                    //HttpContext.Response.Cookies.Append("ID", context.Accounts.FirstOrDefault(x=>x.UserName==account.UserName).Id.ToString());
+                    ClaimsIdentity claims = new ClaimsIdentity(CookieAuthenticationDefaults.AuthenticationScheme);
+                    claims.AddClaim(new Claim("UserName", account.UserName));
+                    claims.AddClaim(new Claim("ID", context.Accounts.FirstOrDefault(x => x.UserName == account.UserName).Id.ToString()));
+                    claims.AddClaim(new Claim("IsAdmin", context.Accounts.FirstOrDefault(x => x.UserName == account.UserName).Admin.ToString()));
+                    ClaimsPrincipal principal = new ClaimsPrincipal(claims);
+                    HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme,principal);
                     return RedirectToAction("Index", "Books");
                 }
                 else

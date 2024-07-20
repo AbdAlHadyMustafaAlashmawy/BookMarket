@@ -26,6 +26,15 @@ namespace BookMarket.Controllers
         }
         public async Task<IActionResult> Index()
         {
+            var isAdminClaim = User.Claims.FirstOrDefault(c => c.Type == "IsAdmin")?.Value;
+            bool isAdmin = false;
+            if (isAdminClaim != null)
+            {
+                isAdmin = bool.Parse(isAdminClaim);
+            }
+
+            // Pass the IsAdmin value to the view
+            ViewBag.IsAdmin = isAdmin;
             var Books = await _booksRepo.GetWholeAsync();
             TempData["books"] = _booksRepo.GetWhole();
             return View(Books);
