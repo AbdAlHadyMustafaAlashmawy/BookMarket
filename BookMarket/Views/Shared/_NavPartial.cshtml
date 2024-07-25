@@ -25,12 +25,25 @@
             </ul>
         </div>
     </div>
-
+    
+    
     <div class="BagHolder" onclick="window.location.href='@Url.Action("index", "Bag")'">
-        <img src="~/images/noun-book-bag-3249030.svg" alt="Books Bag" />
-        <span id="bagItemCount">
+        @{
+            bool IsAdmin = false;
+            var isAdminClaim = User.Claims.FirstOrDefault(c => c.Type == "IsAdmin");
+            if (isAdminClaim != null)
+            {
+                bool.TryParse(isAdminClaim.Value, out IsAdmin);
+            }
+            if (!IsAdmin)
+            {
+                
+                <img src="~/images/noun-book-bag-3249030.svg" alt="Books Bag" />
+                <span id="bagItemCount">
+                </span>
+            }
+            }
 
-        </span>
-
+          
     </div>
 </nav>

@@ -119,6 +119,12 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
+    @{
+        if (ViewBag.IsAdmin)
+        {
+            <a asp-action="CRUD" class="btn btn-primary">CRUD books</a>
+        }
+    }
     <form action="@Url.Action("FiltersForIndex", "Books")" method="post" id="filter">
         <legend>Filters</legend>
         <div class="filter-container">
@@ -157,12 +163,7 @@
         <br />
         <input value="Search" name="Search" style="width:100%" type="submit" class="btn btn-outline-primary" />
     </form>
-    @{
-        if (ViewBag.IsAdmin)
-        {
-            <a asp-action="CRUD" class="btn btn-primary">CRUD books</a>
-        }
-    }
+
     <div>
         <span id="bag-count">@ViewBag.BagCount</span>
     </div>
